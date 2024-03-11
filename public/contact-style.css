@@ -23,7 +23,7 @@
    --navbar-gradient-dark-color: #1E0D2F;
    --navbar-text-color: #FFFFFF;
 
-   --primary-bg-color: #000000;
+   --primary-bg-color: #130D19;
 
    --btn-hover-bg-color: #dd5c16;
 
@@ -31,7 +31,7 @@
    --section-primary-text-color: #FFFFFF;
    --section-highlighter-text-color: #FC934F;
 
-   --padding-inline-section: 107px;
+   --padding-inline-section: 6.6875rem;
 }
 
 body {
@@ -65,15 +65,15 @@ a {
 
    background-image: linear-gradient(to right, var(--navbar-gradient-light-color), var(--navbar-gradient-dark-color));
 
-   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.35);
+   box-shadow: 0 0.1875rem 0.625rem rgba(0, 0, 0, 0.35);
 
-   height: 80px;
+   height: 5rem;
 
-   padding-top: 27px;
-   padding-bottom: 27px;
+   padding-top: 1.6875rem;
+   padding-bottom: 1.6875rem;
 
-   border-bottom-left-radius: 40px;
-   border-bottom-right-radius: 40px;
+   border-bottom-left-radius: 2.5rem;
+   border-bottom-right-radius: 2.5rem;
 
    font-size: large;
 
@@ -81,11 +81,11 @@ a {
 }
 
 .project-logo {
-   font-size: 25px;
+   font-size: 1.5625rem;
    font-weight: 800;
    text-decoration: none;
    color: var(--navbar-text-color);
-   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.35);
+   text-shadow: 0 0.0625rem 0.0625rem rgba(0, 0, 0, 0.35);
 
    cursor: pointer;
 }
@@ -94,7 +94,7 @@ a {
 
 .card2 {
    max-width: 60%;
-   padding: 10px;
+   padding: 0.625rem;
    border-radius: 0.93rem;
 
    position: absolute;
@@ -114,7 +114,7 @@ a {
    justify-content: center;
    align-items: center;
 
-   gap: 25px;
+   gap: 1.5625rem;
 }
 
 .title {
@@ -139,7 +139,7 @@ form textarea {
    border-radius: 0.93rem;
 
    width: 90%;
-   height: 70px;
+   height: 4.375rem;
 
    /* a verticle-scroll bar appears when content exeeds the no. of rows specified */
    overflow-y: auto;
@@ -155,7 +155,7 @@ form textarea {
 }
 
 form textarea {
-   height: 170px;
+   height: 10.625rem;
 }
 
 #submitBtn {

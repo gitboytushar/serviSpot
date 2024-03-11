@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>ServiSpot Homepage</title>
+
+   <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+   <!-- website nav bar -->
+   <nav>
+      <div class="main-nav">
+         <div class="container nav-items flex">
+            <a href="./index.html" class="project-logo">ServiSpot</a>
+            <div class="nav-links">
+               <ul class="flex">
+                  <li><a class="hover-link" onclick="scrollToSection1('section1')">Features</a></li>
+                  <li><a class="hover-link" onclick="scrollToSection2('section2')">About</a></li>
+                  <li><a class="hover-link" onclick="scrollToSection3('section3')">Services</a></li>
+                  <li><a class="hover-link">Account</a></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </nav>
+
+   <!-- hero section -->
+   <header>
+      <div class="container header-section flex">
+         <div class="header-left">
+            <h1>Explore. <br> Evaluate. Elevate</h1>
+            <p class="intro-text">Welcome to our platform where you'll find a variety of services all in one place.
+               Whether you're looking for something
+               basic or a bit more advanced, we've got you covered. Our goal is to make your daily decisions easier and
+               quicker. Take a
+               look around and see how we can simplify your choices!</p>
+            <a class="cta-btn" onclick="scrollToSection3('section3')">Start for free</a>
+         </div>
+
+         <div class="header-right">
+            <img src="./assets/astronaut bg image.svg" alt="astronaut image">
+         </div>
+      </div>
+   </header>
+
+   <!-- features section -->
+   <section class="features-section" id="section1">
+      <div class="container">
+         <h2>Resources and Integrations</h2>
+         <div class="contentbox flex">
+            <div class="box flex">
+               <lord-icon src="https://cdn.lordicon.com/ffjlxuak.json" trigger="in" delay="200" state="in-reveal"
+                  colors="primary:#ee6418,secondary:#f4f19c" style="width:153px;height:153px">
+               </lord-icon>
+               <p>Cluster of cleaned datasets for the better understanding to generate valuable outcomes.</p>
+            </div>
+
+            <div class="box flex">
+               <lord-icon src="https://cdn.lordicon.com/dmgxtuzn.json" trigger="in" delay="200" state="in-reveal"
+                  colors="primary:#ee6418,secondary:#f4f19c" style="width:153px;height:153px">
+               </lord-icon>
+               <p>API integration for useful and faster query responses from the global marketplace.</p>
+            </div>
+
+            <div class="box flex">
+               <lord-icon src="https://cdn.lordicon.com/kcegqely.json" trigger="in" delay="200" state="in-reveal"
+                  colors="primary:#ee6418,secondary:#f4f19c" style="width:153px;height:153px">
+               </lord-icon>
+               <p>Used Artificial intelligence and machine learning models in python apps to perform predictions.</p>
+            </div>
+
+            <div class="box flex">
+               <lord-icon src="https://cdn.lordicon.com/vucunekw.json" trigger="in" delay="200" state="in-reveal"
+                  colors="primary:#ed6417,secondary:#f4f19c" style="width:153px;height:153px">
+               </lord-icon>
+               <p>Minimal and Responsive web design hence can be accessed via smartphone anywhere, anytime.</p>
+            </div>
+
+         </div>
+      </div>
+   </section>
+
+   <!-- about section -->
+   <section class="about-section" id="section2">
+      <div class="container">
+         <h2>Globally Trusted Technologies We've Used</h2>
+         <div class="icons flex">
+            <img class="item1" src="./assets/aws.svg" alt="aws logo">
+            <img class="item2" src="./assets/github.svg" alt="github logo">
+            <img class="item3" src="./assets/python.svg" alt="python logo">
+            <img class="item4" src="./assets/htmlcssjs.svg" alt="htmlcssjs logo">
+            <img class="item5" src="./assets/Figma.svg" alt="figma logo">
+            <img class="item6" src="./assets/google ad.svg" alt="google ad logo">
+         </div>
+      </div>
+   </section>
+
+   <!-- services sections -->
+   <section class="services-section" id="section3">
+      <div class="container">
+         <h2>Some Services we offer</h2>
+         <div class="cards flex">
+            <!-- service number 1 -->
+            <div class="service flex">
+               <lord-icon src="https://cdn.lordicon.com/tobyjxpr.json" trigger="hover" stroke="light"
+                  colors="primary:#ed6417,secondary:#f4f19c" style="width:424px;height:424px">
+               </lord-icon>
+               <div class="content flex">
+                  <p class="subheading">Old Car Price Prediction</p>
+                  <p>You just need to fill some basic data about your car to our predictor and our program will generate
+                     some <span class="highlighted-text">valid price
+                        results</span> for your car selling, which might <span class="highlighted-text">improve
+                        profit</span> in dealing.</p>
+                  <a href="#" class="cta-btn service-btn">Try it Now</a>
+               </div>
+            </div>
+            <!-- service number 2 -->
+            <div class="service flex">
+               <lord-icon src="https://cdn.lordicon.com/odvkctyp.json" trigger="hover" stroke="light"
+                  colors="primary:#ed6417,secondary:#f4f19c" style="width:424px;height:424px">
+               </lord-icon>
+               <div class="content flex">
+                  <p class="subheading">Check Current Weather</p>
+                  <p>Easy to use weather web application. Designed for <span class="highlighted-text">quick
+                        access</span> to
+                     essential results which utilizes the
+                     <span class="highlighted-text">OpenWeatherMap API</span> for accurate forecasts of any region.
+                  </p>
+                  <a href="#" class="cta-btn">Try it Now</a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- website footer -->
+   <footer>
+      <div class="container">
+         <ul class="links flex">
+            <li><a href="#">Project Developers</a></li>
+            <li><a href="#">Our Mission</a></li>
+            <li><a href="#">University</a></li>
+            <li><a href="#">How to Use</a></li>
+         </ul>
+      </div>
+   </footer>
+   <!-- contact us button -->
+   <div class="subfooter">
+      <div class="container flex contact-btn">
+         <a href="./public/contact.html">Contact Us</a>
+         <lord-icon src="https://cdn.lordicon.com/kiynvdns.json" trigger="in" delay="200" stroke="light" state="in-reveal"
+            colors="primary:#ffffff,secondary:#ffffff,tertiary:#ffffff,quaternary:#ffffff,quinary:#b4b4b4"
+            style="width:40px;height:40px">
+         </lord-icon>
+      </div>
+   </div>
+
+   <!-- javascript and cdn links -->
+   <script src="https://cdn.lordicon.com/lordicon.js"></script>
+   <script src="./scroll2section.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>contact-tushar</title>
+
+   <link rel="stylesheet" href="./contact-style.css">
+   <script src="./contact.js"></script>
+   <script src="../scroll2section.js"></script>
+
+   <!-- cdn links for animated lord-icons -->
+   <script src="https://cdn.lordicon.com/lordicon.js"></script>
+</head>
+
+<body>
+   <!-- nav bar -->
+   <nav>
+      <div class="main-nav">
+         <div class="container nav-items flex">
+            <a href="../index.html" class="project-logo">ServiSpot</a>
+         </div>
+      </div>
+   </nav>
+
+   <!-- email form -->
+   <div class="card2">
+      <!-- title -->
+      <div class="form-header">
+         <div class="title">
+            <h3>We'll get back to you</h3>
+         </div>
+         <div class="icon-container">
+            <lord-icon src="https://cdn.lordicon.com/tmqaflqo.json" trigger="loop"
+               colors="primary:#ed6417,secondary:#ebe6ef,tertiary:#f4f19c" style="width:50px;height:50px">
+            </lord-icon>
+         </div>
+      </div>
+
+      <!-- web3forms api integration -->
+      <form action="https://api.web3forms.com/submit" method="POST">
+         <input type="hidden" name="access_key" value="529b9b1f-3a60-44dd-adba-abe617a75e6e">
+
+         <input type="text" name="name" placeholder="Your Name" required autocomplete="off">
+         <input type="email" name="user-email" placeholder="Your Email" required autocomplete="off">
+         <textarea name="message" rows="4" placeholder="Write Your Message..." required autocomplete="off"></textarea>
+
+         <button type="submit" id="submitBtn">Send</button>
+      </form>
+   </div>
+
+</body>
+
+</html>

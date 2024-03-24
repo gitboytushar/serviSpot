@@ -208,7 +208,7 @@ ul {
 }
 
 .cta-btn:active {
-   transform: scale(1.02);
+   transform: translateY(2px);
 }
 
 /* features section */

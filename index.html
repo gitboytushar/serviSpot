@@ -7,6 +7,7 @@
    <title>ServiSpot Homepage</title>
 
    <link rel="stylesheet" href="./style.css">
+   <link rel="stylesheet" href="./media-queries.css">
 
    <!-- Google tag (gtag.js) - Google Analytics -->
    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KRTG8ZKS5K"></script>
@@ -30,25 +31,30 @@
       <div class="main-nav">
          <div class="container nav-items flex">
             <a href="./index.html" class="project-logo">
-               <img style="width: 160px;" src="./assets/logo.png" alt="Logo">
+               <img style="width: 10rem;" src="./assets/logo.png" alt="Logo">
             </a>
             <div class="nav-links">
                <ul class="flex">
+                  <li><a class="hover-link" onclick="scrollToHome('home')">Home</a></li>
                   <li><a class="hover-link" onclick="scrollToSection1('section1')">Features</a></li>
                   <li><a class="hover-link" onclick="scrollToSection2('section2')">About</a></li>
                   <li><a class="hover-link" onclick="scrollToSection3('section3')">Services</a></li>
+                  <li><a class="hover-link" href="./public/contact.html">Contact Us</a></li>
                   <li><a class="hover-link">Account</a></li>
                </ul>
             </div>
+            <a href="#" class="nav-toggle hover-link">
+               <img src="./assets/Menu.svg" alt="hamburger menu">
+            </a>
          </div>
       </div>
    </nav>
 
    <!-- hero section -->
-   <header>
+   <header id="home">
       <div class="container header-section flex">
          <div class="header-left">
-            <h1>Explore. <br> Evaluate. Elevate</h1>
+            <h1>Explore. <br> Evaluate. Elevate.</h1>
             <p class="intro-text">Welcome to our platform where you'll find a variety of services all in one place.
                Whether you're looking for something
                basic or a bit more advanced, we've got you covered. Our goal is to make your daily decisions easier and
@@ -70,30 +76,30 @@
          <div class="contentbox flex">
             <div class="box flex">
                <lord-icon src="https://cdn.lordicon.com/ffjlxuak.json" trigger="in" delay="200" state="in-reveal"
-                  colors="primary:#ee6418,secondary:#f4f19c" style="width:153px;height:153px">
+                  colors="primary:#ee6418,secondary:#f4f19c" style="width:9.5625rem;height:9.5625rem">
                </lord-icon>
                <p>Cluster of cleaned datasets for the better understanding to generate valuable outcomes.</p>
             </div>
 
             <div class="box flex">
                <lord-icon src="https://cdn.lordicon.com/dmgxtuzn.json" trigger="in" delay="200" state="in-reveal"
-                  colors="primary:#ee6418,secondary:#f4f19c" style="width:153px;height:153px">
+                  colors="primary:#ee6418,secondary:#f4f19c" style="width:9.5625rem;height:9.5625rem">
                </lord-icon>
                <p>API integration for useful and faster query responses from the global marketplace.</p>
             </div>
 
             <div class="box flex">
                <lord-icon src="https://cdn.lordicon.com/kcegqely.json" trigger="in" delay="200" state="in-reveal"
-                  colors="primary:#ee6418,secondary:#f4f19c" style="width:153px;height:153px">
+                  colors="primary:#ee6418,secondary:#f4f19c" style="width:9.5625rem;height:9.5625rem">
                </lord-icon>
-               <p>Used Artificial intelligence and machine learning models in python apps to perform predictions.</p>
+               <p>Used Artificial intelligence and machine learning via python apps to perform predictions results.</p>
             </div>
 
             <div class="box flex">
                <lord-icon src="https://cdn.lordicon.com/vucunekw.json" trigger="in" delay="200" state="in-reveal"
-                  colors="primary:#ed6417,secondary:#f4f19c" style="width:153px;height:153px">
+                  colors="primary:#ed6417,secondary:#f4f19c" style="width:9.5625rem;height:9.5625rem">
                </lord-icon>
-               <p>Minimal and Responsive web design hence can be accessed via smartphone anywhere, anytime.</p>
+               <p>Modern and Responsive web design So you can use it via smartphone or tablet anywhere, anytime.</p>
             </div>
 
          </div>
@@ -105,12 +111,21 @@
       <div class="container">
          <h2>Globally Trusted Technologies We've Used</h2>
          <div class="icons flex">
-            <img class="item1" src="./assets/aws.svg" alt="aws logo">
-            <img class="item2" src="./assets/github.svg" alt="github logo">
-            <img class="item3" src="./assets/python.svg" alt="python logo">
-            <img class="item4" src="./assets/htmlcssjs.svg" alt="htmlcssjs logo">
-            <img class="item5" src="./assets/Figma.svg" alt="figma logo">
-            <img class="item6" src="./assets/google ad.svg" alt="google ad logo">
+            <img class="item1 icon-width" src="./assets/serviceIcons/amazon-aws.svg" alt="aws logo">
+            <img class="item2 icon-width" src="./assets/serviceIcons/github.svg" alt="github logo">
+            <img class="item3 icon-width" src="./assets/serviceIcons/git-icon.svg" alt="github logo">
+            <img class="item4 icon-width" src="./assets/serviceIcons/python.svg" alt="python logo">
+            <img class="item5 icon-width" src="./assets/serviceIcons/html.svg" alt="html logo">
+            <img class="item6 icon-width" src="./assets/serviceIcons/figma.svg" alt="figma logo">
+            <img class="item7 icon-width" src="./assets/serviceIcons/css.svg" alt="css logo">
+            <img class="item8 icon-width" style="border-radius: 0.625rem;" src="./assets/serviceIcons/javascript.svg"
+               alt="js logo">
+            <img class="item9 icon-width" src="./assets/serviceIcons/vercel.svg" alt="vercel logo">
+            <img class="item10 icon-width" src="./assets/serviceIcons/google-adsense-icon.svg"
+               alt="google adsense logo">
+            <img class="item11 icon-width" src="./assets/serviceIcons/google-analytics-icon.svg"
+               alt="google analytics logo">
+            <img class="item12 icon-width" src="./assets/serviceIcons/google-cloud-icon.svg" alt="google cloud logo">
          </div>
       </div>
    </section>
@@ -123,7 +138,7 @@
             <!-- service number 1 -->
             <div class="service flex">
                <lord-icon src="https://cdn.lordicon.com/tobyjxpr.json" trigger="hover" stroke="light"
-                  colors="primary:#ed6417,secondary:#f4f19c" style="width:424px;height:424px">
+                  colors="primary:#ed6417,secondary:#f4f19c" style="width:26.5rem;height:26.5rem">
                </lord-icon>
                <div class="content flex">
                   <p class="subheading">Old Car Price Prediction</p>
@@ -137,7 +152,7 @@
             <!-- service number 2 -->
             <div class="service flex">
                <lord-icon src="https://cdn.lordicon.com/odvkctyp.json" trigger="hover" stroke="light"
-                  colors="primary:#ed6417,secondary:#f4f19c" style="width:424px;height:424px">
+                  colors="primary:#ed6417,secondary:#f4f19c" style="width:26.5rem;height:26.5rem">
                </lord-icon>
                <div class="content flex">
                   <p class="subheading">Check Current Weather</p>
@@ -165,15 +180,15 @@
       </div>
    </footer>
    <!-- contact us button -->
-   <div class="subfooter">
-      <div class="container flex contact-btn">
-         <a href="./public/contact.html">Contact Us</a>
+   <div class="subfooter container">
+      <a href="./public/contact.html" class="container flex contact-btn">
+         Contact Us
          <lord-icon src="https://cdn.lordicon.com/kiynvdns.json" trigger="in" delay="200" stroke="light"
             state="in-reveal"
             colors="primary:#ffffff,secondary:#ffffff,tertiary:#ffffff,quaternary:#ffffff,quinary:#b4b4b4"
-            style="width:40px;height:40px">
+            style="width:2.5rem;height:2.5rem">
          </lord-icon>
-      </div>
+      </a>
    </div>
 
    <!-- javascript and cdn links -->

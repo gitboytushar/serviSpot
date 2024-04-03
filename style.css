@@ -110,8 +110,7 @@ ul {
    font-size: 1.4375rem;
 
    padding-inline: 1.875rem;
-   padding-top: 0.8125rem;
-   padding-bottom: 0.8125rem;
+   padding-block: 0.8125rem;
 
    border-radius: 3.125rem;
 
@@ -154,13 +153,14 @@ ul {
 }
 
 .project-logo {
-   font-size: 1.5625rem;
-   font-weight: 800;
-   text-decoration: none;
-   color: var(--navbar-text-color);
-   text-shadow: 0 0.0625rem 0.0625rem rgba(0, 0, 0, 0.35);
-
+   margin-top: .35rem;
    cursor: pointer;
+
+   transition: all .2s linear;
+}
+
+.project-logo:hover {
+   transform: scale(1.05) rotate(-2deg);
 }
 
 .nav-links {
@@ -176,13 +176,14 @@ ul {
 .hover-link {
    color: var(--navbar-text-color);
    text-shadow: 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.35);
-   transition: 0.2 ease-in;
+   transition: all 0.1s ease-in;
    font-weight: 400;
 }
 
 .hover-link:hover {
    color: #dedede;
    cursor: pointer;
+   transform: translateY(-1px);
 }
 
 .nav-toggle {
@@ -199,6 +200,11 @@ ul {
    justify-content: space-between;
 }
 
+/* hiding the small astronaut image in desktop view */
+.for-mobile {
+   display: none;
+}
+
 .header-left h1 {
    font-size: 4.0625rem;
    margin-bottom: 1.6875rem;
@@ -207,6 +213,10 @@ ul {
 .header-left p {
    margin-bottom: 1.6875rem;
    width: 43.75rem;
+}
+
+.intro-text-in-mobile {
+   display: none;
 }
 
 .cta-btn:hover {
@@ -223,7 +233,8 @@ ul {
 .features-section {
    background-color: var(--secondary-bg-color);
    max-width: 100%;
-   height: 35.75rem;
+   height: auto;
+   padding-bottom: 80px;
 }
 
 .features-section h2 {
@@ -260,9 +271,14 @@ ul {
    align-self: flex-start;
 }
 
+.box lord-icon {
+   width: 9.5625rem;
+   height: 9.5625rem;
+}
+
 .box p {
    font-size: 1rem;
-   margin: 0rem 0.625rem 0rem 0.625rem;
+   margin: 0rem 0.625rem;
    color: var(--section-primary-text-color);
 }
 
@@ -271,7 +287,8 @@ ul {
 .about-section {
    background-color: var(--tertiary-bg-color);
    max-width: 100%;
-   height: 43.1875rem;
+   height: auto;
+   padding-bottom: 50px;
 }
 
 .about-section h2 {
@@ -296,10 +313,11 @@ ul {
 }
 
 .icon-width {
+   margin-left: 10%;
+
    width: 80px;
    transition: transform 0.2s ease;
-   will-change: transform;
-   /* help browser's do the smooth animation */
+   will-change: transform; /* help browser's do the smooth animation */
 }
 
 .icon-width:hover {
@@ -360,7 +378,8 @@ ul {
 .services-section {
    background-color: var(--secondary-bg-color);
    max-width: 100%;
-   height: 83.8125rem;
+   height: auto;
+   padding-bottom: 80px;
 }
 
 .services-section h2 {
@@ -388,6 +407,11 @@ ul {
    align-items: center;
    justify-content: space-between;
    padding-inline: 5.5rem;
+}
+
+.service lord-icon {
+   width: 26.5rem;
+   height: 26.5rem;
 }
 
 .content {
@@ -462,6 +486,11 @@ footer a:hover {
    cursor: pointer;
 }
 
+.subfooter lord-icon {
+   width: 2.5rem;
+   height: 2.5rem;
+}
+
 .contact-btn {
    justify-content: center;
 
@@ -477,6 +506,8 @@ footer a:hover {
    padding-inline: 2.0625rem;
 
    gap: 1rem;
+
+   transition: background-color .3s ease;
 }
 
 .contact-btn:hover {

@@ -1,5 +1,80 @@
 /* making homepage responsive */
-/* for tablet here */
+
+/* for very large laptop */
+@media screen and (width: 2560px) {
+   .container {
+      padding-inline: 300px;
+   }
+
+   .header-section {
+      margin-top: 60px;
+      gap: 50px;
+   }
+
+   .header-section img {
+      width: 1000px;
+   }
+
+   .header-left h1 {
+      font-size: 4.5rem;
+   }
+
+   .header-left p {
+      font-size: 1.7rem;
+      font-weight: 300;
+      width: fit-content;
+      text-align: left;
+   }
+
+   .cta-btn {
+      width: 15.5625rem;
+      height: 4.5125rem;
+
+      font-size: 1.7rem;
+      font-weight: 400;
+   }
+}
+
+/* for large Laptop */
+@media screen and (max-width: 1440px) {
+   .nav-links ul {
+      gap: 3rem;
+   }
+
+   .header-section {
+      margin-top: 60px;
+      gap: 50px;
+   }
+
+   .header-section img {
+      width: 600px;
+   }
+
+   .header-left h1 {
+      font-size: 3.5rem;
+   }
+
+   .header-left p {
+      font-size: 1.2rem;
+      font-weight: 300;
+      width: fit-content;
+      text-align: justify;
+   }
+
+   .cta-btn {
+      width: 10.5625rem;
+      height: 2.8125rem;
+
+      font-size: 1.1rem;
+   }
+
+   .features-section {
+      height: fit-content;
+      padding-bottom: 80px;
+   }
+}
+
+/* for medium laptop or big tablets */
 @media screen and (max-width: 1024px) {
    .nav-toggle {
       display: block;
@@ -11,6 +86,13 @@
 
    .header-section {
       justify-content: center;
+      margin-top: 0;
+      gap: 0;
+   }
+
+   .main-nav {
+      padding-top: 1.2rem;
+      padding-bottom: 1.5875rem;
    }
 
    .header-right {
@@ -26,11 +108,6 @@
       background-position: right;
    }
 
-   .main-nav {
-      padding-top: 1.2rem;
-      padding-bottom: 1.5875rem;
-   }
-
    .header-left h1 {
       width: min-content;
    }
@@ -39,6 +116,8 @@
       width: 60%;
       font-size: 1.1rem;
       text-shadow: 0 0.0625rem 0.0625rem rgba(0, 0, 0, 0.35);
+      text-align: left;
+      font-weight: 350;
    }
 
    .cta-btn {
@@ -48,13 +127,17 @@
       font-size: 1.1rem;
    }
 
+   .icons {
+      column-gap: 6rem;
+   }
+
    .features-section {
       height: fit-content;
       padding-bottom: 80px;
    }
-   
+
    .service {
-      gap: 140px;
+      gap: 80px;
    }
 
    .content p {
@@ -82,5 +165,475 @@
 
    .links {
       justify-content: space-between;
+   }
+}
+
+/* for tablets */
+@media screen and (max-width: 768px) {
+   .container {
+      padding-inline: 50px;
+   }
+
+   .header-left {
+      margin-top: 150px;
+      margin-bottom: 60px;
+   }
+
+   .header-left h1 {
+      width: fit-content;
+      font-size: 2.9rem;
+      margin-bottom: 10px;
+   }
+
+   .header-left p {
+      width: 60%;
+      font-size: .9rem;
+      text-shadow: 0 0.0625rem 0.0625rem rgba(0, 0, 0, 0.35);
+      text-align: left;
+      font-weight: 300;
+      margin-bottom: 15px;
+   }
+
+   .cta-btn {
+      width: 8.5rem;
+      height: 2.3rem;
+
+      font-size: .8rem;
+      font-weight: 400;
+   }
+
+   .features-section {
+      padding-bottom: 60px;
+   }
+
+   .features-section h2 {
+      padding-top: 2.5rem;
+   }
+
+   .contentbox {
+      gap: 10px;
+   }
+
+   .box {
+      width: 15.1875rem;
+      height: 15.4375rem;
+   }
+
+   .box lord-icon {
+      width: 7rem;
+      height: 7rem;
+   }
+
+   .box p {
+      font-size: .8rem;
+   }
+
+   .about-section h2 {
+      margin-bottom: 0;
+   }
+
+   .icons {
+      column-gap: 3rem;
+   }
+
+   .icon-width {
+      width: 65px;
+      margin-left: 20%;
+   }
+
+   .services-section h2 {
+      padding-block: 2rem;
+      font-size: 1.5rem;
+   }
+
+   .service {
+      width: 100%;
+      height: 22rem;
+
+      padding-inline: 2rem;
+   }
+
+   .content p {
+      font-size: 1rem;
+      width: 17rem;
+      font-weight: 400;
+   }
+
+   .subheading {
+      margin-bottom: 3rem;
+      margin-top: 0.9375rem;
+   }
+
+   .content a {
+      height: 2rem;
+      width: 8rem;
+
+      font-size: 1rem;
+      margin-left: 52.5%;
+   }
+
+   .services-section {
+      height: 60rem;
+   }
+
+   footer a {
+      font-size: 1rem;
+      margin-block: 1.3rem;
+   }
+
+   .subfooter a {
+      font-size: 1rem;
+   }
+
+   .subfooter lord-icon {
+      width: 2rem;
+      height: 2rem;
+   }
+}
+
+/* for large Mobiles */
+@media screen and (max-width: 430px) {
+   .container {
+      padding-inline: 30px;
+   }
+
+   /* nav bar */
+   .main-nav {
+      padding-top: 1.2rem;
+      padding-bottom: 1.5875rem;
+
+      border-bottom-left-radius: 25px;
+      border-bottom-right-radius: 25px;
+   }
+
+   .project-logo {
+      margin: 0;
+   }
+
+   /* hero section */
+   .for-mobile {
+      display: block;
+   }
+
+   .intro-text {
+      display: none;
+   }
+
+   .intro-text-in-mobile {
+      display: block;
+   }
+
+   .for-mobile img {
+      z-index: -1;
+
+      width: 100%;
+
+      position: absolute;
+      left: 50%;
+      top: 10%;
+      transform: translate(-50%, 0);
+
+      border-bottom-left-radius: 6%;
+      border-bottom-right-radius: 6%;
+   }
+
+   .header-right {
+      display: none;
+   }
+
+   .header-left {
+      margin-top: 462px;
+      margin-bottom: 30px;
+      background: none;
+   }
+
+   .header-left h1 {
+      width: 100%;
+      text-align: center;
+      font-size: 3rem;
+      line-height: 3.3rem;
+      font-weight: 700;
+      margin-bottom: .5rem;
+   }
+
+   .header-left p {
+      width: 100%;
+      padding-inline: 40px;
+      font-size: 1rem;
+      text-shadow: 0 0.0625rem 0.0625rem rgba(0, 0, 0, 0.35);
+      text-align: center;
+      font-weight: 300;
+      margin-bottom: 1.1875rem;
+   }
+
+   .cta-btn {
+      width: 45%;
+
+      font-size: 1.1rem;
+      font-weight: 400;
+
+      position: relative;
+      left: 50%;
+      transform: translate(-50%, 0);
+   }
+
+   /* features section */
+   .features-section {
+      padding-bottom: 50px;
+   }
+
+   .features-section h2 {
+      font-size: 1.3rem;
+   }
+
+   .box {
+      width: 80%;
+   }
+
+   .box p {
+      font-size: .85rem;
+      text-align: center;
+   }
+
+   /* about section */
+   .about-section {
+      padding-bottom: 5px;
+   }
+
+   .about-section h2 {
+      font-size: 1.3rem;
+      padding-top: 2.5rem;
+   }
+
+   .icons {
+      row-gap: 0;
+      column-gap: 0;
+
+      padding: 1.5rem 0;
+   }
+
+   .icon-width {
+      width: 50px;
+      margin-left: 27%;
+   }
+
+   /* service section */
+   .services-section {
+      background-color: var(--secondary-bg-color);
+      max-width: 100%;
+      height: auto;
+      padding-bottom: 80px;
+   }
+
+   .services-section h2 {
+      font-size: 1.3rem;
+      padding-bottom: 15px;
+   }
+
+   .cards {
+      gap: 20px;
+   }
+
+   .service {
+      flex-direction: column;
+      gap: 0;
+
+      background-image: url(./assets/Rectangle\ 3.svg);
+
+      height: 27rem;
+   }
+
+   .subheading {
+      text-align: center !important;
+      margin-bottom: 1.2rem;
+      margin-top: 1rem;
+   }
+
+   .content {
+      align-items: center;
+      justify-content: center;
+   }
+
+   .content p {
+      font-size: .8rem;
+      text-align: center;
+      line-height: 1.5;
+   }
+
+   .content a {
+      height: 16%;
+      width: 43%;
+
+      padding-block: 0.75rem;
+      padding-inline: 0;
+
+      font-size: .85rem;
+      font-weight: 400;
+
+      margin-top: 20px;
+      margin-bottom: 20px;
+      margin-left: 0;
+      margin-right: 60%;
+   }
+
+   /* footer section */
+   footer {
+      height: auto;
+      padding-block: 20px;
+   }
+
+   .links {
+      flex-direction: column;
+   }
+
+   footer a {
+      margin: 15px;
+   }
+}
+
+/* for medium Mobiles */
+@media screen and (max-width: 375px) {
+   .header-section {
+      padding-bottom: 25px;
+   }
+
+   .header-left {
+      margin-top: 410px;
+   }
+
+   .header-left h1 {
+      font-size: 2.5rem;
+      line-height: 2.7rem;
+      margin-bottom: 1rem;
+   }
+
+   .header-left p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+   }
+
+   .cta-btn {
+      font-size: .9rem;
+   }
+
+   /* features section */
+   .features-section h2 {
+      font-size: 1.2rem;
+   }
+
+   .box {
+      width: 100%;
+   }
+
+   /* about section */
+   .about-section {
+      padding-bottom: 5px;
+   }
+
+   .about-section h2 {
+      font-size: 1.2rem;
+   }
+
+   .icons {
+      grid-template-rows: 6.25rem 6.25rem 6.25rem 6.25rem;
+      grid-template-columns: 6.25rem 6.25rem 6.25rem;
+   }
+
+   .item4 {
+      grid-area: 4 / 1 / 4 / 2;
+   }
+
+   .item8 {
+      grid-area: 4 / 2 / 4 / 3;
+   }
+
+   .item12 {
+      grid-area: 4 / 3 / 4 / 4;
+   }
+
+   /* service section */
+   .services-section {
+      padding-bottom: 60px;
+   }
+
+   .services-section h2 {
+      font-size: 1.2rem;
+   }
+}
+
+/* for small Mobiles */
+@media screen and (max-width: 320px) {
+   .container {
+      padding-inline: 20px;
+   }
+
+   .header-section {
+      padding-bottom: 25px;
+   }
+
+   .header-left {
+      margin-top: 357px;
+   }
+
+   .header-left h1 {
+      font-size: 2.2rem;
+   }
+
+   .header-left p {
+      font-size: .9rem;
+   }
+
+   .cta-btn {
+      font-size: .9rem;
+      padding: 0;
+   }
+
+   /* features section */
+   .features-section h2 {
+      font-size: 1rem;
+   }
+
+   .box {
+      width: 85%;
+   }
+
+   .box p {
+      font-size: .8rem;
+   }
+
+   /* about section */
+   .about-section {
+      padding-bottom: 5px;
+   }
+
+   .about-section h2 {
+      font-size: 1rem;
+   }
+
+   /* service section */
+   .services-section {
+      padding-bottom: 60px;
+   }
+
+   .services-section h2 {
+      font-size: 1.1rem;
+   }
+
+   .service {
+      width: 100%;
+      padding-inline: 5%;
+   }
+
+   .content p {
+      font-size: .75rem;
+      width: 13rem;
+   }
+
+   .content a {
+      height: 2rem;
+      width: 60%;
+
+      margin-left: 0;
+      margin-right: 42.5%;
    }
 }

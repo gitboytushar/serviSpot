@@ -38,6 +38,8 @@ body {
    font-family: 'Poppins', sans-serif;
    color: var(--section-primary-text-color);
    background-color: var(--primary-bg-color);
+
+   overflow: hidden;
 }
 
 a {
@@ -56,7 +58,6 @@ a {
 }
 
 /* nav bar */
-
 .main-nav {
    position: fixed;
    top: 0;
@@ -81,28 +82,33 @@ a {
 }
 
 .project-logo {
-   font-size: 1.5625rem;
-   font-weight: 800;
-   text-decoration: none;
-   color: var(--navbar-text-color);
-   text-shadow: 0 0.0625rem 0.0625rem rgba(0, 0, 0, 0.35);
-
+   margin-top: .35rem;
    cursor: pointer;
+
+   transition: all .2s linear;
 }
 
-/* contact form */
+.project-logo img {
+   width: 160px;
+   height: fit-content;
+}
 
+.project-logo:hover {
+   transform: scale(1.05) rotate(-2deg);
+}
+
+/* contact form here */
 .card2 {
-   max-width: 60%;
+   max-width: 700px;
    padding: 0.625rem;
    border-radius: 0.93rem;
 
-   position: absolute;
+   margin-top: 430px;
+
+   position: relative;
    top: 55%;
    left: 50%;
    transform: translate(-50%, -50%);
-
-   display: inline-block;
 }
 
 .form-header {
@@ -124,6 +130,11 @@ a {
 .icon-container {
    display: flex;
    align-items: center;
+}
+
+.icon-container lord-icon {
+   width: 50px;
+   height: 50px;
 }
 
 form input,
@@ -190,48 +201,71 @@ form textarea {
    cursor: pointer;
 }
 
-/* making this page responsive for smartphone */
-@media (max-width: 37.5rem) {
-   .card {
-      width: 60%;
-      padding: 1.5rem;
-   }
+/* RESPONSIVE CODE */
 
-   .card2 {
-      width: 60%;
-      padding: 1.5rem;
-   }
-
-   .icon {
-      height: 6.5rem;
-      width: 6.5rem;
-      position: relative;
-      left: 50%;
-      transform: translate(-50%, 0);
-   }
-
-   .info {
-      display: block;
-      line-height: 2rem;
-      margin: 0;
-      padding: 0;
-   }
-
-   /* email top-padding given in mobile-screen-response only */
-   .info:nth-child(2) {
-      padding-top: 1rem;
-   }
-
-   .content {
-      display: block;
+/* for laptop and tablets */
+@media screen and (max-width: 768px) {
+   .nav-items {
+      justify-content: center;
       text-align: center;
    }
 
-   .detail {
-      margin: 0;
+   .card2 {
+      margin-top: 400px;
    }
 
-   img {
-      height: 2.2rem;
+   .form-header {
+      flex-direction: column-reverse;
+      gap: 0;
+   }
+
+   .icon-container lord-icon {
+      width: 120px;
+      height: 120px;
+   }
+}
+
+/* for large and medium mobiles */
+@media screen and (max-width: 425px) {
+   .icon-container lord-icon {
+      width: 100px;
+      height: 100px;
+   }
+
+   .title h3 {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+   }
+
+   .card2 {
+      width: 90%;
+      padding: 1rem;
+
+      margin-top: 360px;
+   }
+
+   form input,
+   form textarea {
+      height: 3rem;
+      border-radius: 0.63rem;
+   }
+
+   form textarea {
+      height: 8rem;
+   }
+
+   #submitBtn {
+      margin: 0;
+      margin-top: 20px;
+
+      width: 40%;
+      height: 2.5rem;
+   }
+}
+
+/* for small mobile */
+@media screen and (max-width: 320px) {
+   .container {
+      padding-inline: 0;
    }
 }

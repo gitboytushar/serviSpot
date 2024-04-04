@@ -89,7 +89,6 @@ a {
 }
 
 /* nav bar */
-
 .main-nav {
    position: fixed;
    top: 0;
@@ -114,13 +113,19 @@ a {
 }
 
 .project-logo {
-   font-size: 1.5625rem;
-   font-weight: 800;
-   text-decoration: none;
-   color: var(--navbar-text-color);
-   text-shadow: 0 0.0625rem 0.0625rem rgba(0, 0, 0, 0.35);
-
+   margin-top: .35rem;
    cursor: pointer;
+
+   transition: all .2s linear;
+}
+
+.project-logo img {
+   width: 160px;
+   height: fit-content;
+}
+
+.project-logo:hover {
+   transform: scale(1.05) rotate(-2deg);
 }
 
 /* mission block */
@@ -133,46 +138,83 @@ a {
    font-size: 25px;
    font-weight: 250;
 
-   max-width: 750px;
+   width: 65%;
 
    margin-top: 68px;
 
    text-align: justify;
 }
 
+.content p:nth-child(2) {
+   margin-top: 45px;
+}
+
 .highlight {
    color: var(--section-highlighter-text-color);
 }
 
-/* subfooter contant us button */
+/* RESPONSIVE CODE */
 
-.subfooter a {
-   font-size: 1.25rem;
-   font-weight: 400;
-   color: var(--contact-btn-primary-text-color);
+@media screen and (max-width: 1024px) {
+   .content {
+      width: 80%;
+   }
 
-   cursor: pointer;
+   .content p {
+      font-size: 1.3rem;
+   }
 }
 
-.contact-btn {
-   width: fit-content;
-   height: 3.75rem;
-   border: 0.125rem solid var(--contact-btn-outline-color);
-   border-radius: 1.25rem;
+@media screen and (max-width: 768px) {
+   .content {
+      width: 100%;
+   }
 
-   margin-top: 7rem;
-   padding: 0;
-   padding-inline: 2.0625rem;
-   gap: 0.8125rem;
+   .content p {
+      font-size: 1.2rem;
+      text-align: center;
+   }
 
-   margin-left: 77%;
+   .project-logo {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+   }
 }
 
-.contact-btn button {
-   border: none;
-   background-color: transparent;
+@media screen and (max-width: 425px) {
+   .container {
+      padding: 9px;
+   }
+
+   .content {
+      margin-top: 30px;
+      width: 85%;
+   }
+
+   .info h2 {
+      font-size: 1.25rem;
+      margin-top: 120px;
+   }
+
+   .content p {
+      font-size: 1.2rem;
+   }
 }
 
-.contact-btn:hover {
-   background-color: var(--contact-btn-hover-bg-color);
+@media screen and (max-width: 375px) {
+   .content {
+      width: 80%;
+   }
+   .content p {
+      font-size: 1rem;
+   }
+}
+
+@media screen and (max-width: 320px) {
+
+   .content p {
+      font-size: 1.05rem;
+   }
 }

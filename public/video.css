@@ -62,23 +62,6 @@ h2 {
    color: var(--heading-text-color1);
 }
 
-p {
-   font-family: "Roboto", sans-serif;
-   font-weight: 300;
-   font-style: normal;
-
-   text-shadow: 0 1px 3px #000000;
-}
-
-a {
-   text-decoration: none;
-   display: inline-block;
-
-   font-family: "Roboto", sans-serif;
-   font-style: normal;
-   font-weight: 500;
-}
-
 /* utility classes */
 
 .container {
@@ -91,7 +74,6 @@ a {
 }
 
 /* nav bar */
-
 .main-nav {
    position: fixed;
    top: 0;
@@ -116,13 +98,19 @@ a {
 }
 
 .project-logo {
-   font-size: 1.5625rem;
-   font-weight: 800;
-   text-decoration: none;
-   color: var(--navbar-text-color);
-   text-shadow: 0 0.0625rem 0.0625rem rgba(0, 0, 0, 0.35);
-
+   margin-top: .35rem;
    cursor: pointer;
+
+   transition: all .2s linear;
+}
+
+.project-logo img {
+   width: 160px;
+   height: fit-content;
+}
+
+.project-logo:hover {
+   transform: scale(1.05) rotate(-2deg);
 }
 
 /* video playback from youtube */
@@ -131,8 +119,100 @@ a {
    flex-direction: column;
 }
 
+.info h2 {
+   margin-top: 140px;
+}
+
 .video {
    margin-top: 60px;
+}
 
-   box-shadow: 0 0 40px 20px var(--navbar-gradient-dark-color);
+iframe {
+   width: 960px;
+   height: 515px;
+
+   border: none;
+   border-radius: 20px;
+
+   box-shadow: 0 0 50px 20px var(--navbar-gradient-dark-color);
+}
+
+/* RESPONSIVE CODE */
+
+@media screen and (max-width: 1024px) {
+   .container {
+      padding-inline: 70px;
+   }
+
+   .info {
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+   }
+
+   iframe {
+      border-radius: 10px;
+
+      width: 855px;
+      height: 450px;
+   }
+
+   .video {
+      margin-top: 45px;
+   }
+}
+
+@media screen and (max-width: 768px) {
+   .container {
+      padding-inline: 0;
+   }
+
+   .info h2 {
+      font-size: 1.3rem;
+   }
+
+   iframe {
+      width: 655px;
+      height: 350px;
+   }
+
+   .project-logo {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+   }
+}
+
+@media screen and (max-width: 425px) {
+   .info h2 {
+      font-size: 1.1rem;
+   }
+
+   iframe {
+      width: 355px;
+      height: 200px;
+   }
+}
+
+@media screen and (max-width: 375px) {
+   .info h2 {
+      font-size: 1rem;
+   }
+
+   iframe {
+      width: 300px;
+      height: 165px;
+   }
+}
+
+@media screen and (max-width: 320px) {
+   .info h2 {
+      font-size: .8rem;
+   }
+
+   iframe {
+      width: 250px;
+      height: 135px;
+   }
 }

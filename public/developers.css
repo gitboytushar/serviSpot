@@ -89,7 +89,6 @@ a {
 }
 
 /* nav bar */
-
 .main-nav {
    position: fixed;
    top: 0;
@@ -114,13 +113,19 @@ a {
 }
 
 .project-logo {
-   font-size: 1.5625rem;
-   font-weight: 800;
-   text-decoration: none;
-   color: var(--navbar-text-color);
-   text-shadow: 0 0.0625rem 0.0625rem rgba(0, 0, 0, 0.35);
-
+   margin-top: .35rem;
    cursor: pointer;
+
+   transition: all .2s linear;
+}
+
+.project-logo img {
+   width: 160px;
+   height: fit-content;
+}
+
+.project-logo:hover {
+   transform: scale(1.05) rotate(-2deg);
 }
 
 /* developers info */
@@ -138,7 +143,7 @@ a {
 
 .name {
    font-size: 25px;
-   font-weight: 400;
+   font-weight: 500;
 
    margin-bottom: 15px;
 }
@@ -153,25 +158,131 @@ a {
    cursor: pointer;
 }
 
-.contact-btn {
-   width: fit-content;
-   height: 3.75rem;
-   border: 0.125rem solid var(--contact-btn-outline-color);
-   border-radius: 1.25rem;
-
-   margin-top: 7rem;
-   padding: 0;
-   padding-inline: 2.0625rem;
-   gap: 0.8125rem;
-
-   margin-left: 77%;
+.subfooter lord-icon {
+   width: 2.5rem;
+   height: 2.5rem;
 }
 
-.contact-btn button {
+.contact-btn {
+   position: relative;
+   left: 50%;
+   transform: translate(-50%, 0);
+
+   justify-content: center;
+
+   width: 40%;
+   height: 3.2rem;
+
    border: none;
-   background-color: transparent;
+   background-color: var(--contact-btn-outline-color);
+   border-radius: 1rem;
+
+   margin-block: 5rem;
+
+   padding: 0;
+   padding-inline: 2.0625rem;
+
+   gap: 1rem;
+
+   transition: background-color .3s ease;
 }
 
 .contact-btn:hover {
-   background-color: var(--contact-btn-hover-bg-color);
+   box-shadow: 0 0 10px var(--navbar-gradient-light-color);
+}
+
+/* RESPONSIVE CODE */
+
+@media screen and (max-width: 1024px) {
+   .info {
+      margin-inline: 80px;
+   }
+
+   .content {
+      margin-top: 50px;
+   }
+
+   .name {
+      font-size: 25px;
+      font-weight: 500;
+
+      margin-bottom: 10px;
+   }
+}
+
+@media screen and (max-width: 768px) {
+   .project-logo {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+   }
+}
+
+@media screen and (max-width: 425px) {
+   .container {
+      padding: 0;
+   }
+
+   .project-logo {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+   }
+
+   .info h2 {
+      font-size: 1.3rem;
+   }
+
+   .content p {
+      font-size: 1.2rem;
+   }
+
+   .content p:nth-child(2) {
+      font-size: .8rem;
+   }
+
+   .contact-btn {
+      width: 55%;
+      margin-top: 50px;
+   }
+}
+
+@media screen and (max-width: 375px) {
+   .info {
+      margin-inline: 70px;
+   }
+
+   .info h2 {
+      margin-top: 130px;
+   }
+
+   .content p {
+      font-size: 1.1rem;
+   }
+}
+
+@media screen and (max-width: 320px) {
+   .info h2 {
+      font-size: 1.2rem;
+   }
+
+   .content p {
+      font-size: 1.1rem;
+   }
+
+   .subfooter a {
+      font-size: 1rem;
+   }
+
+   .contact-btn {
+      width: 70%;
+      height: 2.7rem;
+   }
+
+   .subfooter lord-icon {
+      width: 2rem;
+      height: 2rem;
+   }
 }

@@ -91,7 +91,6 @@ a {
 }
 
 /* nav bar */
-
 .main-nav {
    position: fixed;
    top: 0;
@@ -116,13 +115,19 @@ a {
 }
 
 .project-logo {
-   font-size: 1.5625rem;
-   font-weight: 800;
-   text-decoration: none;
-   color: var(--navbar-text-color);
-   text-shadow: 0 0.0625rem 0.0625rem rgba(0, 0, 0, 0.35);
-
+   margin-top: .35rem;
    cursor: pointer;
+
+   transition: all .2s linear;
+}
+
+.project-logo img {
+   width: 160px;
+   height: fit-content;
+}
+
+.project-logo:hover {
+   transform: scale(1.05) rotate(-2deg);
 }
 
 /* university description */
@@ -154,35 +159,118 @@ a {
    color: var(--section-highlighter-text-color);
 }
 
-/* subfooter contant us button */
-
-.subfooter a {
-   font-size: 1.25rem;
-   font-weight: 400;
-   color: var(--contact-btn-primary-text-color);
-
-   cursor: pointer;
+.mobile {
+   display: none;
 }
 
-.contact-btn {
-   width: fit-content;
-   height: 3.75rem;
-   border: 0.125rem solid var(--contact-btn-outline-color);
-   border-radius: 1.25rem;
+/* RESPONSIVE CODE */
 
-   margin-top: 7rem;
-   padding: 0;
-   padding-inline: 2.0625rem;
-   gap: 0.8125rem;
+@media screen and (max-width: 1024px) {
+   .container {
+      padding-inline: 20px;
+   }
 
-   margin-left: 77%;
+   .info h2 {
+      margin-top: 140px;
+   }
+
+   .content {
+      width: 80%;
+      height: auto;
+   }
+
+   .content p {
+      font-size: 1.1rem;
+      width: 400px;
+      line-height: 1.4;
+
+      padding: 20px 0;
+   }
 }
 
-.contact-btn button {
-   border: none;
-   background-color: transparent;
+@media screen and (max-width: 768px) {
+   .content {
+      width: 90%;
+      margin-top: 45px;
+   }
+
+   .content p {
+      font-size: .9rem;
+      width: 300px;
+      line-height: 1.2;
+   }
+
+   .contact-btn {
+      width: 65%;
+      margin-top: 50px;
+   }
+
+   .project-logo {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+   }
 }
 
-.contact-btn:hover {
-   background-color: var(--contact-btn-hover-bg-color);
+@media screen and (max-width: 425px) {
+   .container {
+      padding-inline: 30px;
+   }
+
+   .content {
+      background: none;
+      width: 100%;
+      text-align: center;
+      justify-content: center;
+   }
+
+   .info h2 {
+      font-size: 1.2rem;
+   }
+
+   .content p {
+      width: 100%;
+      font-size: .9rem;
+      padding: 0;
+      margin: 0;
+   }
+
+   .mobile {
+      display: block;
+      margin-top: 40px;
+      padding-inline: 20px;
+   }
+
+   img {
+      width: 350px;
+   }
+}
+
+@media screen and (max-width: 375px) {
+   .info h2 {
+      font-size: 1.2rem;
+   }
+
+   .content p {
+      font-size: .9rem;
+   }
+
+   img {
+      width: 300px;
+   }
+}
+
+@media screen and (max-width: 320px) {
+   .info h2 {
+      font-size: 1.1rem;
+   }
+
+   .content p {
+      font-size: .8rem;
+   }
+
+   img {
+      width: 250px;
+   }
 }

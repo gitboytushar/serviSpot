@@ -1,18 +1,18 @@
 /* making homepage responsive */
 
 /* for very large laptop */
-@media screen and (width: 2560px) {
+@media screen and (width: 160rem) {
    .container {
-      padding-inline: 300px;
+      padding-inline: 18.75rem;
    }
 
    .header-section {
-      margin-top: 60px;
-      gap: 50px;
+      margin-top: 3.75rem;
+      gap: 3.125rem;
    }
 
    .header-section img {
-      width: 1000px;
+      width: 62.5rem;
    }
 
    .header-left h1 {
@@ -36,18 +36,18 @@
 }
 
 /* for large Laptop */
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 90rem) {
    .nav-links ul {
       gap: 3rem;
    }
 
    .header-section {
-      margin-top: 60px;
-      gap: 50px;
+      margin-top: 3.75rem;
+      gap: 3.125rem;
    }
 
    .header-section img {
-      width: 600px;
+      width: 37.5rem;
    }
 
    .header-left h1 {
@@ -70,12 +70,12 @@
 
    .features-section {
       height: fit-content;
-      padding-bottom: 80px;
+      padding-bottom: 5rem;
    }
 }
 
 /* for medium laptop or big tablets */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 64rem) {
    .nav-toggle {
       display: block;
    }
@@ -100,8 +100,8 @@
    }
 
    .header-left {
-      margin-top: 150px;
-      margin-bottom: 70px;
+      margin-top: 9.375rem;
+      margin-bottom: 4.375rem;
       background-image: url(./assets/astronaut\ bg\ image.svg);
       background-size: contain;
       background-repeat: no-repeat;
@@ -133,11 +133,11 @@
 
    .features-section {
       height: fit-content;
-      padding-bottom: 80px;
+      padding-bottom: 5rem;
    }
 
    .service {
-      gap: 80px;
+      gap: 5rem;
    }
 
    .content p {
@@ -169,20 +169,20 @@
 }
 
 /* for tablets */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 48rem) {
    .container {
-      padding-inline: 50px;
+      padding-inline: 3.125rem;
    }
 
    .header-left {
-      margin-top: 150px;
-      margin-bottom: 60px;
+      margin-top: 9.375rem;
+      margin-bottom: 3.75rem;
    }
 
    .header-left h1 {
       width: fit-content;
       font-size: 2.9rem;
-      margin-bottom: 10px;
+      margin-bottom: 0.625rem;
    }
 
    .header-left p {
@@ -191,7 +191,7 @@
       text-shadow: 0 0.0625rem 0.0625rem rgba(0, 0, 0, 0.35);
       text-align: left;
       font-weight: 300;
-      margin-bottom: 15px;
+      margin-bottom: 0.9375rem;
    }
 
    .cta-btn {
@@ -203,7 +203,7 @@
    }
 
    .features-section {
-      padding-bottom: 60px;
+      padding-bottom: 3.75rem;
    }
 
    .features-section h2 {
@@ -211,7 +211,7 @@
    }
 
    .contentbox {
-      gap: 10px;
+      gap: 0.625rem;
    }
 
    .box {
@@ -237,7 +237,7 @@
    }
 
    .icon-width {
-      width: 65px;
+      width: 4.0625rem;
       margin-left: 20%;
    }
 
@@ -292,9 +292,9 @@
 }
 
 /* for large Mobiles */
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 26.875rem) {
    .container {
-      padding-inline: 30px;
+      padding-inline: 1.875rem;
    }
 
    /* nav bar */
@@ -302,8 +302,8 @@
       padding-top: 1.2rem;
       padding-bottom: 1.5875rem;
 
-      border-bottom-left-radius: 25px;
-      border-bottom-right-radius: 25px;
+      border-bottom-left-radius: 1.5625rem;
+      border-bottom-right-radius: 1.5625rem;
    }
 
    .project-logo {
@@ -342,8 +342,8 @@
    }
 
    .header-left {
-      margin-top: 462px;
-      margin-bottom: 30px;
+      margin-top: 28.875rem;
+      margin-bottom: 1.875rem;
       background: none;
    }
 
@@ -358,7 +358,7 @@
 
    .header-left p {
       width: 100%;
-      padding-inline: 40px;
+      padding-inline: 2.5rem;
       font-size: 1rem;
       text-shadow: 0 0.0625rem 0.0625rem rgba(0, 0, 0, 0.35);
       text-align: center;
@@ -379,7 +379,7 @@
 
    /* features section */
    .features-section {
-      padding-bottom: 50px;
+      padding-bottom: 3.125rem;
    }
 
    .features-section h2 {
@@ -397,7 +397,7 @@
 
    /* about section */
    .about-section {
-      padding-bottom: 5px;
+      padding-bottom: 0.3125rem;
    }
 
    .about-section h2 {
@@ -413,7 +413,7 @@
    }
 
    .icon-width {
-      width: 50px;
+      width: 3.125rem;
       margin-left: 27%;
    }
 
@@ -422,16 +422,16 @@
       background-color: var(--secondary-bg-color);
       max-width: 100%;
       height: auto;
-      padding-bottom: 80px;
+      padding-bottom: 5rem;
    }
 
    .services-section h2 {
       font-size: 1.3rem;
-      padding-bottom: 15px;
+      padding-bottom: 0.9375rem;
    }
 
    .cards {
-      gap: 20px;
+      gap: 1.25rem;
    }
 
    .service {
@@ -470,8 +470,8 @@
       font-size: .85rem;
       font-weight: 400;
 
-      margin-top: 20px;
-      margin-bottom: 20px;
+      margin-top: 1.25rem;
+      margin-bottom: 1.25rem;
       margin-left: 0;
       margin-right: 60%;
    }
@@ -479,7 +479,7 @@
    /* footer section */
    footer {
       height: auto;
-      padding-block: 20px;
+      padding-block: 1.25rem;
    }
 
    .links {
@@ -487,18 +487,18 @@
    }
 
    footer a {
-      margin: 15px;
+      margin: 0.9375rem;
    }
 }
 
 /* for medium Mobiles */
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 23.4375rem) {
    .header-section {
-      padding-bottom: 25px;
+      padding-bottom: 1.5625rem;
    }
 
    .header-left {
-      margin-top: 410px;
+      margin-top: 25.625rem;
    }
 
    .header-left h1 {
@@ -527,7 +527,7 @@
 
    /* about section */
    .about-section {
-      padding-bottom: 5px;
+      padding-bottom: 0.3125rem;
    }
 
    .about-section h2 {
@@ -553,7 +553,7 @@
 
    /* service section */
    .services-section {
-      padding-bottom: 60px;
+      padding-bottom: 3.75rem;
    }
 
    .services-section h2 {
@@ -562,17 +562,17 @@
 }
 
 /* for small Mobiles */
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 20rem) {
    .container {
-      padding-inline: 20px;
+      padding-inline: 1.25rem;
    }
 
    .header-section {
-      padding-bottom: 25px;
+      padding-bottom: 1.5625rem;
    }
 
    .header-left {
-      margin-top: 357px;
+      margin-top: 22.3125rem;
    }
 
    .header-left h1 {
@@ -603,7 +603,7 @@
 
    /* about section */
    .about-section {
-      padding-bottom: 5px;
+      padding-bottom: 0.3125rem;
    }
 
    .about-section h2 {
@@ -612,7 +612,7 @@
 
    /* service section */
    .services-section {
-      padding-bottom: 60px;
+      padding-bottom: 3.75rem;
    }
 
    .services-section h2 {

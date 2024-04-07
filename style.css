@@ -183,7 +183,7 @@ ul {
 .hover-link:hover {
    color: #dedede;
    cursor: pointer;
-   transform: translateY(-1px);
+   transform: translateY(-0.0625rem);
 }
 
 .nav-toggle {
@@ -225,7 +225,7 @@ ul {
 }
 
 .cta-btn:active {
-   transform: translateY(2px);
+   transform: translateY(0.125rem);
 }
 
 /* features section */
@@ -234,7 +234,7 @@ ul {
    background-color: var(--secondary-bg-color);
    max-width: 100%;
    height: auto;
-   padding-bottom: 80px;
+   padding-bottom: 5rem;
 }
 
 .features-section h2 {
@@ -248,7 +248,7 @@ ul {
    justify-content: space-evenly;
    flex-wrap: wrap;
    /* to make 4 columns into less */
-   gap: 30px;
+   gap: 1.875rem;
 }
 
 .box {
@@ -261,7 +261,7 @@ ul {
    border-radius: 1.25rem;
 
    flex-direction: column;
-   gap: 40px;
+   gap: 2.5rem;
 
    padding-inline: 1.9375rem;
    padding-bottom: 1.9375rem;
@@ -288,7 +288,7 @@ ul {
    background-color: var(--tertiary-bg-color);
    max-width: 100%;
    height: auto;
-   padding-bottom: 50px;
+   padding-bottom: 3.125rem;
 }
 
 .about-section h2 {
@@ -315,7 +315,7 @@ ul {
 .icon-width {
    margin-left: 10%;
 
-   width: 80px;
+   width: 5rem;
    transition: transform 0.2s ease;
    will-change: transform; /* help browser's do the smooth animation */
 }
@@ -362,7 +362,7 @@ ul {
 
 .item9 {
    grid-area: 3 / 2 / 3 / 3;
-   width: 100px;
+   width: 6.25rem;
 }
 
 .item11 {
@@ -379,7 +379,7 @@ ul {
    background-color: var(--secondary-bg-color);
    max-width: 100%;
    height: auto;
-   padding-bottom: 80px;
+   padding-bottom: 5rem;
 }
 
 .services-section h2 {
@@ -515,5 +515,5 @@ footer a:hover {
 }
 
 .contact-btn:active {
-   transform: translateY(2px);
+   transform: translateY(0.125rem);
 }

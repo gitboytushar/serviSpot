@@ -7,6 +7,8 @@
    margin: 0;
    padding: 0;
    box-sizing: border-box;
+
+   /* outline: 1px solid red; */
 }
 
 :root {
@@ -89,8 +91,7 @@ a {
 }
 
 .project-logo img {
-   width: 160px;
-   height: fit-content;
+   width: 10rem;
 }
 
 .project-logo:hover {
@@ -99,11 +100,11 @@ a {
 
 /* contact form here */
 .card2 {
-   max-width: 700px;
+   max-width: 43.75rem;
    padding: 0.625rem;
    border-radius: 0.93rem;
 
-   margin-top: 430px;
+   margin-top: 26.875rem;
 
    position: relative;
    top: 55%;
@@ -133,8 +134,8 @@ a {
 }
 
 .icon-container lord-icon {
-   width: 50px;
-   height: 50px;
+   width: 3.125rem;
+   height: 3.125rem;
 }
 
 form input,
@@ -175,7 +176,6 @@ form textarea {
    transform: translate(-50%, 0);
 
    margin-top: 0.625rem;
-   margin-left: 34.5%;
 
    width: 9rem;
    height: 3rem;
@@ -204,14 +204,14 @@ form textarea {
 /* RESPONSIVE CODE */
 
 /* for laptop and tablets */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 48rem) {
    .nav-items {
       justify-content: center;
       text-align: center;
    }
 
    .card2 {
-      margin-top: 400px;
+      margin-top: 25rem;
    }
 
    .form-header {
@@ -220,28 +220,28 @@ form textarea {
    }
 
    .icon-container lord-icon {
-      width: 120px;
-      height: 120px;
+      width: 7.5rem;
+      height: 7.5rem;
    }
 }
 
 /* for large and medium mobiles */
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 26.5625rem) {
    .icon-container lord-icon {
-      width: 100px;
-      height: 100px;
+      width: 6.25rem;
+      height: 6.25rem;
    }
 
    .title h3 {
       font-size: 1.1rem;
-      margin-bottom: 20px;
+      margin-bottom: 1.25rem;
    }
 
    .card2 {
       width: 90%;
       padding: 1rem;
 
-      margin-top: 360px;
+      margin-top: 22.5rem;
    }
 
    form input,
@@ -253,18 +253,10 @@ form textarea {
    form textarea {
       height: 8rem;
    }
-
-   #submitBtn {
-      margin: 0;
-      margin-top: 20px;
-
-      width: 40%;
-      height: 2.5rem;
-   }
 }
 
 /* for small mobile */
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 20rem) {
    .container {
       padding-inline: 0;
    }

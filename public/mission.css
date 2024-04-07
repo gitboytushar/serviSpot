@@ -57,7 +57,7 @@ h2 {
    font-weight: 700;
    font-style: normal;
 
-   margin-top: 170px;
+   margin-top: 10.625rem;
 
    color: var(--heading-text-color1);
 }
@@ -120,8 +120,7 @@ a {
 }
 
 .project-logo img {
-   width: 160px;
-   height: fit-content;
+   width: 10rem;
 }
 
 .project-logo:hover {
@@ -135,18 +134,18 @@ a {
 }
 
 .content {
-   font-size: 25px;
+   font-size: 1.5625rem;
    font-weight: 250;
 
    width: 65%;
 
-   margin-top: 68px;
+   margin-top: 4.25rem;
 
    text-align: justify;
 }
 
 .content p:nth-child(2) {
-   margin-top: 45px;
+   margin-top: 2.8125rem;
 }
 
 .highlight {
@@ -155,7 +154,7 @@ a {
 
 /* RESPONSIVE CODE */
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 64rem) {
    .content {
       width: 80%;
    }
@@ -165,7 +164,7 @@ a {
    }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 48rem) {
    .content {
       width: 100%;
    }
@@ -183,19 +182,19 @@ a {
    }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 26.5625rem) {
    .container {
-      padding: 9px;
+      padding: 0.5625rem;
    }
 
    .content {
-      margin-top: 30px;
+      margin-top: 1.875rem;
       width: 85%;
    }
 
    .info h2 {
       font-size: 1.25rem;
-      margin-top: 120px;
+      margin-top: 7.5rem;
    }
 
    .content p {
@@ -203,7 +202,7 @@ a {
    }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 23.4375rem) {
    .content {
       width: 80%;
    }
@@ -212,7 +211,7 @@ a {
    }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 20rem) {
 
    .content p {
       font-size: 1.05rem;

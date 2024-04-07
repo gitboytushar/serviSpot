@@ -57,7 +57,7 @@ h2 {
    font-weight: 700;
    font-style: normal;
 
-   margin-top: 130px;
+   margin-top: 8.125rem;
 
    color: var(--heading-text-color1);
 }
@@ -105,8 +105,7 @@ h2 {
 }
 
 .project-logo img {
-   width: 160px;
-   height: fit-content;
+   width: 10rem;
 }
 
 .project-logo:hover {
@@ -120,28 +119,28 @@ h2 {
 }
 
 .info h2 {
-   margin-top: 140px;
+   margin-top: 8.75rem;
 }
 
 .video {
-   margin-top: 60px;
+   margin-top: 3.75rem;
 }
 
 iframe {
-   width: 960px;
-   height: 515px;
+   width: 60rem;
+   height: 32.1875rem;
 
    border: none;
-   border-radius: 20px;
+   border-radius: 1.25rem;
 
-   box-shadow: 0 0 50px 20px var(--navbar-gradient-dark-color);
+   box-shadow: 0 0 3.125rem 1.25rem var(--navbar-gradient-dark-color);
 }
 
 /* RESPONSIVE CODE */
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 64rem) {
    .container {
-      padding-inline: 70px;
+      padding-inline: 4.375rem;
    }
 
    .info {
@@ -151,18 +150,18 @@ iframe {
    }
 
    iframe {
-      border-radius: 10px;
+      border-radius: 0.625rem;
 
-      width: 855px;
-      height: 450px;
+      width: 53.4375rem;
+      height: 28.125rem;
    }
 
    .video {
-      margin-top: 45px;
+      margin-top: 2.8125rem;
    }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 48rem) {
    .container {
       padding-inline: 0;
    }
@@ -172,8 +171,8 @@ iframe {
    }
 
    iframe {
-      width: 655px;
-      height: 350px;
+      width: 40.9375rem;
+      height: 21.875rem;
    }
 
    .project-logo {
@@ -184,35 +183,35 @@ iframe {
    }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 26.5625rem) {
    .info h2 {
       font-size: 1.1rem;
    }
 
    iframe {
-      width: 355px;
-      height: 200px;
+      width: 22.1875rem;
+      height: 12.5rem;
    }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 23.4375rem) {
    .info h2 {
       font-size: 1rem;
    }
 
    iframe {
-      width: 300px;
-      height: 165px;
+      width: 18.75rem;
+      height: 10.3125rem;
    }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 20rem) {
    .info h2 {
       font-size: .8rem;
    }
 
    iframe {
-      width: 250px;
-      height: 135px;
+      width: 15.625rem;
+      height: 8.4375rem;
    }
 }

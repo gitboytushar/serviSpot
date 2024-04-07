@@ -57,7 +57,7 @@ h2 {
    font-weight: 700;
    font-style: normal;
 
-   margin-top: 170px;
+   margin-top: 10.625rem;
 
    color: var(--heading-text-color1);
 }
@@ -120,8 +120,7 @@ a {
 }
 
 .project-logo img {
-   width: 160px;
-   height: fit-content;
+   width: 10rem;
 }
 
 .project-logo:hover {
@@ -134,18 +133,18 @@ a {
    flex-direction: column;
    text-align: center;
 
-   margin-inline: 269px;
+   margin-inline: 16.8125rem;
 }
 
 .content {
-   margin-top: 77px;
+   margin-top: 4.8125rem;
 }
 
 .name {
-   font-size: 25px;
+   font-size: 1.5625rem;
    font-weight: 500;
 
-   margin-bottom: 15px;
+   margin-bottom: 0.9375rem;
 }
 
 /* subfooter contant us button */
@@ -188,29 +187,29 @@ a {
 }
 
 .contact-btn:hover {
-   box-shadow: 0 0 10px var(--navbar-gradient-light-color);
+   box-shadow: 0 0 0.625rem var(--navbar-gradient-light-color);
 }
 
 /* RESPONSIVE CODE */
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 64rem) {
    .info {
-      margin-inline: 80px;
+      margin-inline: 5rem;
    }
 
    .content {
-      margin-top: 50px;
+      margin-top: 3.125rem;
    }
 
    .name {
-      font-size: 25px;
+      font-size: 1.5625rem;
       font-weight: 500;
 
-      margin-bottom: 10px;
+      margin-bottom: 0.625rem;
    }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 48rem) {
    .project-logo {
       position: absolute;
       left: 50%;
@@ -219,7 +218,7 @@ a {
    }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 26.5625rem) {
    .container {
       padding: 0;
    }
@@ -245,17 +244,17 @@ a {
 
    .contact-btn {
       width: 55%;
-      margin-top: 50px;
+      margin-top: 3.125rem;
    }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 23.4375rem) {
    .info {
-      margin-inline: 70px;
+      margin-inline: 4.375rem;
    }
 
    .info h2 {
-      margin-top: 130px;
+      margin-top: 8.125rem;
    }
 
    .content p {
@@ -263,7 +262,7 @@ a {
    }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 20rem) {
    .info h2 {
       font-size: 1.2rem;
    }

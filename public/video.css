@@ -108,8 +108,11 @@ h2 {
    width: 10rem;
 }
 
-.project-logo:hover {
-   transform: scale(1.05) rotate(-2deg);
+/* Apply hover effect only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+   .project-logo:hover {
+      transform: scale(1.05) rotate(-2deg);
+   }
 }
 
 /* video playback from youtube */
@@ -170,9 +173,16 @@ iframe {
       font-size: 1.3rem;
    }
 
+   /* fixed a sizing bug here */
    iframe {
-      width: 40.9375rem;
-      height: 21.875rem;
+      width: 100%;
+      /* Adjusted width for responsiveness */
+      height: auto;
+      /* Ensures aspect ratio is maintained */
+      max-width: 22.1875rem;
+      /* Added max-width to prevent stretching */
+      max-height: 12.5rem;
+      /* Added max-height to prevent stretching */
    }
 
    .project-logo {
@@ -187,31 +197,16 @@ iframe {
    .info h2 {
       font-size: 1.1rem;
    }
-
-   iframe {
-      width: 22.1875rem;
-      height: 12.5rem;
-   }
 }
 
 @media screen and (max-width: 23.4375rem) {
    .info h2 {
       font-size: 1rem;
    }
-
-   iframe {
-      width: 18.75rem;
-      height: 10.3125rem;
-   }
 }
 
 @media screen and (max-width: 20rem) {
    .info h2 {
       font-size: .8rem;
-   }
-
-   iframe {
-      width: 15.625rem;
-      height: 8.4375rem;
    }
 }

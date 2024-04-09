@@ -123,8 +123,11 @@ a {
    width: 10rem;
 }
 
-.project-logo:hover {
-   transform: scale(1.05) rotate(-2deg);
+/* Apply hover effect only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+   .project-logo:hover {
+      transform: scale(1.05) rotate(-2deg);
+   }
 }
 
 /* mission block */
@@ -206,6 +209,7 @@ a {
    .content {
       width: 80%;
    }
+
    .content p {
       font-size: 1rem;
    }

@@ -8,7 +8,7 @@
    padding: 0;
    box-sizing: border-box;
 
-   /* outline: 1px solid red; */
+   /* outline: 0.0625rem solid red; */
 }
 
 :root {
@@ -84,7 +84,7 @@ a {
 }
 
 .project-logo {
-   margin-top: .35rem;
+   margin-top: 0.35rem;
    cursor: pointer;
 
    transition: all .2s linear;
@@ -229,7 +229,7 @@ form textarea {
 }
 
 /* for large and medium mobiles */
-@media screen and (max-width: 26.5625rem) {
+@media screen and (max-width: 26.875rem) {
    .icon-container lord-icon {
       width: 6.25rem;
       height: 6.25rem;

@@ -113,7 +113,7 @@ a {
 }
 
 .project-logo {
-   margin-top: .35rem;
+   margin-top: 0.35rem;
    cursor: pointer;
 
    transition: all .2s linear;
@@ -185,7 +185,7 @@ a {
    }
 }
 
-@media screen and (max-width: 26.5625rem) {
+@media screen and (max-width: 26.875rem) {
    .container {
       padding: 0.5625rem;
    }

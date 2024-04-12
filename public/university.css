@@ -115,7 +115,7 @@ a {
 }
 
 .project-logo {
-   margin-top: .35rem;
+   margin-top: 0.35rem;
    cursor: pointer;
 
    transition: all .2s linear;
@@ -197,7 +197,7 @@ a {
    }
 
    .content p {
-      font-size: .9rem;
+      font-size: 0.9rem;
       width: 18.75rem;
       line-height: 1.2;
    }
@@ -215,7 +215,7 @@ a {
    }
 }
 
-@media screen and (max-width: 26.5625rem) {
+@media screen and (max-width: 26.875rem) {
    .container {
       padding-inline: 1.875rem;
    }
@@ -233,7 +233,7 @@ a {
 
    .content p {
       width: 100%;
-      font-size: .9rem;
+      font-size: 0.9rem;
       padding: 0;
       margin: 0;
    }
@@ -255,7 +255,7 @@ a {
    }
 
    .content p {
-      font-size: .9rem;
+      font-size: 0.9rem;
    }
 
    img {
@@ -269,7 +269,7 @@ a {
    }
 
    .content p {
-      font-size: .8rem;
+      font-size: 0.8rem;
    }
 
    img {

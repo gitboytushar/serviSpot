@@ -219,13 +219,16 @@ ul {
    display: none;
 }
 
-.cta-btn:hover {
-   cursor: pointer;
-   background-color: var(--btn-hover-bg-color);
-}
+/* works on non-touch devices only */
+@media (hover: hover) and (pointer: fine) {
+   .cta-btn:hover {
+      cursor: pointer;
+      background-color: var(--btn-hover-bg-color);
+   }
 
-.cta-btn:active {
-   transform: translateY(0.125rem);
+   .cta-btn:active {
+      transform: translateY(0.125rem);
+   }
 }
 
 /* features section */
@@ -510,10 +513,13 @@ footer a:hover {
    transition: background-color .3s ease;
 }
 
-.contact-btn:hover {
-   background-color: var(--contact-btn-hover-bg-color);
-}
+/* works on non-touch devices only */
+@media (hover: hover) and (pointer: fine) {
+   .contact-btn:hover {
+      background-color: var(--contact-btn-hover-bg-color);
+   }
 
-.contact-btn:active {
-   transform: translateY(0.125rem);
+   .contact-btn:active {
+      transform: translateY(0.125rem);
+   }
 }

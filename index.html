@@ -39,7 +39,7 @@
             <a href="./index.html" class="project-logo">
                <img style="width: 10rem;" src="./assets/logo.png" alt="Logo">
             </a>
-            <div class="nav-links">
+            <div class="nav-links" id="menu">
                <ul class="flex">
                   <li><a class="hover-link" onclick="scrollToHome('home')">Home</a></li>
                   <li><a class="hover-link" onclick="scrollToSection1('section1')">Features</a></li>
@@ -49,8 +49,8 @@
                   <li><a class="hover-link">Account</a></li>
                </ul>
             </div>
-            <a href="#" class="nav-toggle hover-link">
-               <img src="./assets/Menu.svg" alt="hamburger menu">
+            <a href="#" class="nav-toggle hover-link" id="menu-icon">
+               <img src="./assets/Menu.svg" alt="hamburger menu icon">
             </a>
          </div>
       </div>
@@ -204,6 +204,7 @@
    <!-- javascript and cdn links -->
    <script src="https://cdn.lordicon.com/lordicon.js"></script>
    <script src="./scroll2section.js"></script>
+   <script src="./menu-toggle.js"></script>
 </body>
 
 </html>

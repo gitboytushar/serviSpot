@@ -1,87 +1,117 @@
-/* making homepage responsive */
-
 /* for very large laptop */
-@media screen and (width: 160rem) {
+@media screen and (width: 2560px) {
    .container {
-      padding-inline: 18.75rem;
+      padding-inline: 300px;
    }
 
    .header-section {
-      margin-top: 3.75rem;
-      gap: 3.125rem;
+      margin-top: 60px;
+      gap: 50px;
    }
 
    .header-section img {
-      width: 62.5rem;
+      width: 1000px;
    }
 
    .header-left h1 {
-      font-size: 4.5rem;
+      font-size: 72px;
    }
 
    .header-left p {
-      font-size: 1.7rem;
+      font-size: 27.2px;
       font-weight: 300;
       width: fit-content;
       text-align: left;
    }
 
    .cta-btn {
-      width: 15.5625rem;
-      height: 4.5125rem;
+      width: 249px;
+      height: 72.2px;
 
-      font-size: 1.7rem;
+      font-size: 27.2px;
       font-weight: 400;
    }
 }
 
 /* for large Laptop */
-@media screen and (max-width: 90rem) {
+@media screen and (max-width: 1440px) {
    .nav-links ul {
-      gap: 3rem;
+      gap: 48px;
    }
 
    .header-section {
-      margin-top: 3.75rem;
-      gap: 3.125rem;
+      margin-top: 60px;
+      gap: 50px;
    }
 
    .header-section img {
-      width: 37.5rem;
+      width: 600px;
    }
 
    .header-left h1 {
-      font-size: 3.5rem;
+      font-size: 56px;
    }
 
    .header-left p {
-      font-size: 1.2rem;
+      font-size: 19.2px;
       font-weight: 300;
       width: fit-content;
       text-align: justify;
    }
 
    .cta-btn {
-      width: 10.5625rem;
-      height: 2.8125rem;
+      width: 169px;
+      height: 45px;
 
-      font-size: 1.1rem;
+      font-size: 17.6px;
    }
 
    .features-section {
       height: fit-content;
-      padding-bottom: 5rem;
+      padding-bottom: 80px;
    }
 }
 
 /* for medium laptop or big tablets */
-@media screen and (max-width: 64rem) {
+@media screen and (max-width: 1024px) {
    .nav-toggle {
       display: block;
+      z-index: 100;
    }
 
+   /* hamburger menu */
    .nav-links {
-      display: none;
+      position: absolute;
+      top: 0%;
+      right: -100%;
+
+      z-index: 10;
+
+      width: 100%;
+      height: 100vh;
+
+      /* to allow scroll when needed */
+      overflow-y: auto;
+
+      padding-top: 150px;
+      padding-bottom: 100px;
+
+      backdrop-filter: blur(30px);
+      -webkit-backdrop-filter: blur(30px);
+
+      transition: all 0.2s linear;
+   }
+
+   .nav-links.active {
+      right: 0%;
+   }
+
+   .nav-links ul {
+      flex-direction: column;
+
+      gap: 3rem;
+      
+      font-size: 1.5rem;
    }
 
    .header-section {
@@ -91,8 +121,8 @@
    }
 
    .main-nav {
-      padding-top: 1.2rem;
-      padding-bottom: 1.5875rem;
+      padding-top: 19.2px;
+      padding-bottom: 25.4px;
    }
 
    .header-right {
@@ -100,8 +130,8 @@
    }
 
    .header-left {
-      margin-top: 9.375rem;
-      margin-bottom: 4.375rem;
+      margin-top: 150px;
+      margin-bottom: 70px;
       background-image: url(./assets/astronaut\ bg\ image.svg);
       background-size: contain;
       background-repeat: no-repeat;
@@ -114,53 +144,53 @@
 
    .header-left p {
       width: 60%;
-      font-size: 1.1rem;
-      text-shadow: 0 0.0625rem 0.0625rem rgba(0, 0, 0, 0.35);
+      font-size: 17.6px;
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.35);
       text-align: left;
       font-weight: 350;
    }
 
    .cta-btn {
-      width: 10.5625rem;
-      height: 2.8125rem;
+      width: 169px;
+      height: 45px;
 
-      font-size: 1.1rem;
+      font-size: 17.6px;
    }
 
    .icons {
-      column-gap: 6rem;
+      column-gap: 96px;
    }
 
    .features-section {
       height: fit-content;
-      padding-bottom: 5rem;
+      padding-bottom: 80px;
    }
 
    .service {
-      gap: 5rem;
+      gap: 80px;
    }
 
    .content p {
-      font-size: 1.1rem;
-      width: 17rem;
+      font-size: 17.6px;
+      width: 272px;
    }
 
    .content a {
-      height: 2.4rem;
-      width: 8.8rem;
+      height: 38.4px;
+      width: 140.8px;
 
-      font-size: 1.15rem;
+      font-size: 18.4px;
 
-      margin-top: 2.5rem;
+      margin-top: 40px;
       margin-left: 48%;
    }
 
    footer {
-      height: 4rem;
+      height: 64px;
    }
 
    footer a {
-      margin-block: 1.3rem;
+      margin-block: 20.8px;
    }
 
    .links {
@@ -169,63 +199,63 @@
 }
 
 /* for tablets */
-@media screen and (max-width: 48rem) {
+@media screen and (max-width: 768px) {
    .container {
-      padding-inline: 3.125rem;
+      padding-inline: 50px;
    }
 
    .header-left {
-      margin-top: 9.375rem;
-      margin-bottom: 3.75rem;
+      margin-top: 150px;
+      margin-bottom: 60px;
    }
 
    .header-left h1 {
       width: fit-content;
-      font-size: 2.9rem;
-      margin-bottom: 0.625rem;
+      font-size: 46.4px;
+      margin-bottom: 10px;
    }
 
    .header-left p {
       width: 60%;
-      font-size: .9rem;
-      text-shadow: 0 0.0625rem 0.0625rem rgba(0, 0, 0, 0.35);
+      font-size: 14.4px;
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.35);
       text-align: left;
       font-weight: 300;
-      margin-bottom: 0.9375rem;
+      margin-bottom: 15px;
    }
 
    .cta-btn {
-      width: 8.5rem;
-      height: 2.3rem;
+      width: 136px;
+      height: 36.8px;
 
-      font-size: .8rem;
+      font-size: 12.8px;
       font-weight: 400;
    }
 
    .features-section {
-      padding-bottom: 3.75rem;
+      padding-bottom: 60px;
    }
 
    .features-section h2 {
-      padding-top: 2.5rem;
+      padding-top: 40px;
    }
 
    .contentbox {
-      gap: 0.625rem;
+      gap: 10px;
    }
 
    .box {
-      width: 15.1875rem;
-      height: 15.4375rem;
+      width: 243px;
+      height: 247px;
    }
 
    .box lord-icon {
-      width: 7rem;
-      height: 7rem;
+      width: 112px;
+      height: 112px;
    }
 
    .box p {
-      font-size: .8rem;
+      font-size: 12.8px;
    }
 
    .about-section h2 {
@@ -233,77 +263,77 @@
    }
 
    .icons {
-      column-gap: 3rem;
+      column-gap: 48px;
    }
 
    .icon-width {
-      width: 4.0625rem;
+      width: 65px;
       margin-left: 20%;
    }
 
    .services-section h2 {
-      padding-block: 2rem;
-      font-size: 1.5rem;
+      padding-block: 32px;
+      font-size: 24px;
    }
 
    .service {
       width: 100%;
-      height: 22rem;
+      height: 352px;
 
-      padding-inline: 2rem;
+      padding-inline: 32px;
    }
 
    .content p {
-      font-size: 1rem;
-      width: 17rem;
+      font-size: 16px;
+      width: 272px;
       font-weight: 400;
    }
 
    .subheading {
-      margin-bottom: 3rem;
-      margin-top: 0.9375rem;
+      margin-bottom: 48px;
+      margin-top: 15px;
    }
 
    .content a {
-      height: 2rem;
-      width: 8rem;
+      height: 32px;
+      width: 128px;
 
-      font-size: 1rem;
+      font-size: 16px;
       margin-left: 52.5%;
    }
 
    .services-section {
-      height: 60rem;
+      height: 960px;
    }
 
    footer a {
-      font-size: 1rem;
-      margin-block: 1.3rem;
+      font-size: 16px;
+      margin-block: 20.8px;
    }
 
    .subfooter a {
-      font-size: 1rem;
+      font-size: 16px;
    }
 
    .subfooter lord-icon {
-      width: 2rem;
-      height: 2rem;
+      width: 32px;
+      height: 32px;
    }
 }
 
 /* for large Mobiles */
-@media screen and (max-width: 26.875rem) {
+@media screen and (max-width: 430px) {
    .container {
-      padding-inline: 1.875rem;
+      padding-inline: 30px;
    }
 
    /* nav bar */
    .main-nav {
-      padding-top: 1.2rem;
-      padding-bottom: 1.5875rem;
+      padding-top: 19.2px;
+      padding-bottom: 25.4px;
 
-      border-bottom-left-radius: 1.5625rem;
-      border-bottom-right-radius: 1.5625rem;
+      border-bottom-left-radius: 25px;
+      border-bottom-right-radius: 25px;
    }
 
    .project-logo {
@@ -342,34 +372,34 @@
    }
 
    .header-left {
-      margin-top: 28.875rem;
-      margin-bottom: 1.875rem;
+      margin-top: 462px;
+      margin-bottom: 30px;
       background: none;
    }
 
    .header-left h1 {
       width: 100%;
       text-align: center;
-      font-size: 3rem;
-      line-height: 3.3rem;
+      font-size: 48px;
+      line-height: 52.8px;
       font-weight: 700;
-      margin-bottom: .5rem;
+      margin-bottom: 8px;
    }
 
    .header-left p {
       width: 100%;
-      padding-inline: 2.5rem;
-      font-size: 1rem;
-      text-shadow: 0 0.0625rem 0.0625rem rgba(0, 0, 0, 0.35);
+      padding-inline: 40px;
+      font-size: 16px;
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.35);
       text-align: center;
       font-weight: 300;
-      margin-bottom: 1.1875rem;
+      margin-bottom: 19px;
    }
 
    .cta-btn {
-      width: 45%;
+      width: 50%;
 
-      font-size: 1.1rem;
+      font-size: 17.6px;
       font-weight: 400;
 
       position: relative;
@@ -379,11 +409,11 @@
 
    /* features section */
    .features-section {
-      padding-bottom: 3.125rem;
+      padding-bottom: 50px;
    }
 
    .features-section h2 {
-      font-size: 1.3rem;
+      font-size: 20.8px;
    }
 
    .box {
@@ -391,29 +421,29 @@
    }
 
    .box p {
-      font-size: .85rem;
+      font-size: 13.6px;
       text-align: center;
    }
 
    /* about section */
    .about-section {
-      padding-bottom: 0.3125rem;
+      padding-bottom: 5px;
    }
 
    .about-section h2 {
-      font-size: 1.3rem;
-      padding-top: 2.5rem;
+      font-size: 20.8px;
+      padding-top: 40px;
    }
 
    .icons {
       row-gap: 0;
       column-gap: 0;
 
-      padding: 1.5rem 0;
+      padding: 24px 0;
    }
 
    .icon-width {
-      width: 3.125rem;
+      width: 50px;
       margin-left: 27%;
    }
 
@@ -422,16 +452,16 @@
       background-color: var(--secondary-bg-color);
       max-width: 100%;
       height: auto;
-      padding-bottom: 5rem;
+      padding-bottom: 80px;
    }
 
    .services-section h2 {
-      font-size: 1.3rem;
-      padding-bottom: 0.9375rem;
+      font-size: 20.8px;
+      padding-bottom: 15px;
    }
 
    .cards {
-      gap: 1.25rem;
+      gap: 20px;
    }
 
    .service {
@@ -440,13 +470,13 @@
 
       background-image: url(./assets/Rectangle\ 3.svg);
 
-      height: 27rem;
+      height: 432px;
    }
 
    .subheading {
       text-align: center !important;
-      margin-bottom: 1.2rem;
-      margin-top: 1rem;
+      margin-bottom: 19.2px;
+      margin-top: 16px;
    }
 
    .content {
@@ -455,7 +485,7 @@
    }
 
    .content p {
-      font-size: .8rem;
+      font-size: 12.8px;
       text-align: center;
       line-height: 1.5;
    }
@@ -464,14 +494,14 @@
       height: 16%;
       width: 43%;
 
-      padding-block: 0.75rem;
+      padding-block: 12px;
       padding-inline: 0;
 
-      font-size: .85rem;
+      font-size: 13.6px;
       font-weight: 400;
 
-      margin-top: 1.25rem;
-      margin-bottom: 1.25rem;
+      margin-top: 20px;
+      margin-bottom: 20px;
       margin-left: 0;
       margin-right: 60%;
    }
@@ -479,7 +509,7 @@
    /* footer section */
    footer {
       height: auto;
-      padding-block: 1.25rem;
+      padding-block: 20px;
    }
 
    .links {
@@ -487,38 +517,39 @@
    }
 
    footer a {
-      margin: 0.9375rem;
+      margin: 15px;
    }
 }
 
 /* for medium Mobiles */
-@media screen and (max-width: 23.4375rem) {
+@media screen and (max-width: 375px) {
    .header-section {
-      padding-bottom: 1.5625rem;
+      padding-bottom: 25px;
    }
 
    .header-left {
-      margin-top: 25.625rem;
+      margin-top: 410px;
    }
 
    .header-left h1 {
-      font-size: 2.5rem;
-      line-height: 2.7rem;
-      margin-bottom: 1rem;
+      font-size: 40px;
+      line-height: 43.2px;
+      margin-bottom: 16px;
    }
 
    .header-left p {
-      font-size: 1.1rem;
-      margin-bottom: 1.5rem;
+      font-size: 17.6px;
+      margin-bottom: 24px;
    }
 
    .cta-btn {
-      font-size: .9rem;
+      font-size: 14px;
+      width: fit-content;
    }
 
    /* features section */
    .features-section h2 {
-      font-size: 1.2rem;
+      font-size: 19.2px;
    }
 
    .box {
@@ -527,16 +558,16 @@
 
    /* about section */
    .about-section {
-      padding-bottom: 0.3125rem;
+      padding-bottom: 5px;
    }
 
    .about-section h2 {
-      font-size: 1.2rem;
+      font-size: 19.2px;
    }
 
    .icons {
-      grid-template-rows: 6.25rem 6.25rem 6.25rem 6.25rem;
-      grid-template-columns: 6.25rem 6.25rem 6.25rem;
+      grid-template-rows: 100px 100px 100px 100px;
+      grid-template-columns: 100px 100px 100px;
    }
 
    .item4 {
@@ -553,44 +584,45 @@
 
    /* service section */
    .services-section {
-      padding-bottom: 3.75rem;
+      padding-bottom: 60px;
    }
 
    .services-section h2 {
-      font-size: 1.2rem;
+      font-size: 19.2px;
    }
 }
 
 /* for small Mobiles */
-@media screen and (max-width: 20rem) {
+@media screen and (max-width: 320px) {
    .container {
-      padding-inline: 1.25rem;
+      padding-inline: 20px;
    }
 
    .header-section {
-      padding-bottom: 1.5625rem;
+      padding-bottom: 25px;
    }
 
    .header-left {
-      margin-top: 22.3125rem;
+      margin-top: 357px;
    }
 
    .header-left h1 {
-      font-size: 2.2rem;
+      font-size: 35.2px;
    }
 
    .header-left p {
-      font-size: .9rem;
+      font-size: 14.4px;
    }
 
    .cta-btn {
-      font-size: .9rem;
+      font-size: 14.4px;
       padding: 0;
+      padding-inline: 15px;
    }
 
    /* features section */
    .features-section h2 {
-      font-size: 1rem;
+      font-size: 16px;
    }
 
    .box {
@@ -598,25 +630,25 @@
    }
 
    .box p {
-      font-size: .8rem;
+      font-size: 12.8px;
    }
 
    /* about section */
    .about-section {
-      padding-bottom: 0.3125rem;
+      padding-bottom: 5px;
    }
 
    .about-section h2 {
-      font-size: 1rem;
+      font-size: 16px;
    }
 
    /* service section */
    .services-section {
-      padding-bottom: 3.75rem;
+      padding-bottom: 60px;
    }
 
    .services-section h2 {
-      font-size: 1.1rem;
+      font-size: 17.6px;
    }
 
    .service {
@@ -625,12 +657,12 @@
    }
 
    .content p {
-      font-size: .75rem;
-      width: 13rem;
+      font-size: 12px;
+      width: 208px;
    }
 
    .content a {
-      height: 2rem;
+      height: 32px;
       width: 60%;
 
       margin-left: 0;

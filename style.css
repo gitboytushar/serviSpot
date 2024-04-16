@@ -229,6 +229,7 @@ ul {
    padding-inline: 1.25rem;
 
    backdrop-filter: blur(6.25rem);
+   -webkit-backdrop-filter: blur(6.25rem);
 
    border-radius: 0.625rem;
 

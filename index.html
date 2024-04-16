@@ -6,7 +6,7 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <!-- google adsense meta tag with / at the end -->
-   <meta name="google-adsense-account" content="ca-pub-2379418646926058"/>
+   <meta name="google-adsense-account" content="ca-pub-2379418646926058" />
 
    <title>ServiSpot Homepage</title>
 
@@ -27,7 +27,7 @@
    <!-- google adsense script tag -->
    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2379418646926058"
       crossorigin="anonymous"></script>
-      
+
 </head>
 
 <body>
@@ -46,10 +46,27 @@
                   <li><a class="hover-link" onclick="scrollToSection2('section2')">About</a></li>
                   <li><a class="hover-link" onclick="scrollToSection3('section3')">Services</a></li>
                   <li><a class="hover-link" href="./public/contact.html">Contact Us</a></li>
-                  <li><a class="hover-link">Account</a></li>
+
+                  <!-- user account options dropdown -->
+                  <li>
+                     <a class="hover-link" id="accountLink">Account <img
+                           style="transform: translateY(0.2188rem) translateX(-0.1875rem) scale(0.7);"
+                           src="./assets/Sort Down.svg" alt="down-arrow"></a>
+
+                     <div class="dropdown-menu" id="accountDropdown">
+                        <ul>
+                           <li><a class="sub-hover-link" href="#1">Sign up <img src="./assets/signUpLogo.svg"
+                                    alt="signUp icon"></a></li>
+                           <li><a class="sub-hover-link" href="#2">Sign in <img src="./assets/signInLogo.svg"
+                                    alt="signIn icon"></a></li>
+                        </ul>
+                     </div>
+                  </li>
+
                </ul>
             </div>
-            <a href="#" class="nav-toggle hover-link" id="menu-icon">
+
+            <a class="nav-toggle hover-link" id="menu-icon">
                <img src="./assets/Menu.svg" alt="hamburger menu icon">
             </a>
          </div>
@@ -205,6 +222,7 @@
    <script src="https://cdn.lordicon.com/lordicon.js"></script>
    <script src="./scroll2section.js"></script>
    <script src="./menu-toggle.js"></script>
+   <script src="./account-btn.js"></script>
 </body>
 
 </html>

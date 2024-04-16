@@ -188,9 +188,17 @@ a {
 
       padding: 1.25rem 0;
    }
+
+   .project-logo img {
+      margin-left: 5.5rem;
+   }
 }
 
 @media screen and (max-width: 48rem) {
+   .project-logo img {
+      margin-left: 0;
+   }
+
    .content {
       width: 90%;
       margin-top: 2.8125rem;

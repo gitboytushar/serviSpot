@@ -7,6 +7,9 @@
    margin: 0;
    padding: 0;
    box-sizing: border-box;
+
+   /* to check the css layout */
+   /* outline: 0.0625rem solid red; */
 }
 
 :root {
@@ -146,6 +149,9 @@ ul {
    font-size: large;
 
    z-index: 10;
+
+   user-select: none;
+   -webkit-user-select: none;
 }
 
 .nav-items {
@@ -188,6 +194,78 @@ ul {
 
 .nav-toggle {
    display: none;
+}
+
+/* fade in animation for dropdown menu */
+@keyframes fadeIn {
+   from {
+      opacity: 0;
+      top: 10%;
+   }
+
+   to {
+      opacity: 1;
+      top: 20%;
+   }
+}
+
+/* account options in dropdown menu */
+.dropdown-menu {
+   display: none;
+}
+
+.dropdown-menu.active {
+   z-index: -1;
+
+   display: block;
+   position: absolute;
+
+   width: 8.75rem;
+
+   transform: translateX(-1.5625rem);
+
+   padding-top: 3.4375rem;
+   padding-bottom: 0.3125rem;
+   padding-inline: 1.25rem;
+
+   backdrop-filter: blur(6.25rem);
+
+   border-radius: 0.625rem;
+
+   animation: fadeIn 0.5s ease forwards; /* called the animation function we created above with 'forwards' property to retrain the final state of animation-end */
+}
+
+.dropdown-menu ul li a {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+
+   margin-inline: 0.25rem;
+}
+
+.dropdown-menu ul li {
+   margin-block: 0.9375rem;
+}
+
+.dropdown-menu img {
+   width: 1.25rem;
+}
+
+.sub-hover-link {
+   color: var(--navbar-text-color);
+
+   font-weight: 400;
+
+   cursor: pointer;
+
+   transition: all 0.1s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+   .sub-hover-link:hover {
+      color: var(--heading-text-color1);
+      transform: translateX(0.125rem);
+   }
 }
 
 /* hero section */
@@ -320,7 +398,8 @@ ul {
 
    width: 5rem;
    transition: transform 0.2s ease;
-   will-change: transform; /* help browser's do the smooth animation */
+   will-change: transform;
+   /* help browser's do the smooth animation */
 }
 
 .icon-width:hover {

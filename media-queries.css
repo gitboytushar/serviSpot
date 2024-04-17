@@ -96,8 +96,7 @@
       padding-top: 150px;
       padding-bottom: 100px;
 
-      backdrop-filter: blur(30px);
-      -webkit-backdrop-filter: blur(30px);
+      background-color: rgba(0, 0, 0, 0.9);
 
       transition: all 0.2s linear;
    }

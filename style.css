@@ -187,9 +187,8 @@ ul {
 }
 
 .hover-link:hover {
-   color: #dedede;
    cursor: pointer;
-   transform: translateY(-0.0625rem);
+   color: #dedede;
 }
 
 .nav-toggle {
@@ -270,6 +269,16 @@ ul {
 }
 
 /* hero section */
+@keyframes entry {
+   from{
+      opacity: 0;
+      transform: translateY(-50px);
+   }
+   to{
+      opacity: 1;
+      transform: translateY(0px);
+   }
+}
 
 .intro-text {
    color: var(--intro-text-color);
@@ -277,6 +286,9 @@ ul {
 
 .header-section {
    justify-content: space-between;
+
+   /* entry animation */
+   animation: entry 1s ease forwards;
 }
 
 /* hiding the small astronaut image in desktop view */

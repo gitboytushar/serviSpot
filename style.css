@@ -232,7 +232,8 @@ ul {
 
    border-radius: 0.625rem;
 
-   animation: fadeIn 0.5s ease forwards; /* called the animation function we created above with 'forwards' property to retrain the final state of animation-end */
+   animation: fadeIn 0.5s ease forwards;
+   /* called the animation function we created above with 'forwards' property to retrain the final state of animation-end */
 }
 
 .dropdown-menu ul li a {
@@ -270,13 +271,14 @@ ul {
 
 /* hero section */
 @keyframes entry {
-   from{
+   from {
       opacity: 0;
-      transform: translateY(-50px);
+      transform: translateY(-3.125rem);
    }
-   to{
+
+   to {
       opacity: 1;
-      transform: translateY(0px);
+      transform: translateY(0rem);
    }
 }
 

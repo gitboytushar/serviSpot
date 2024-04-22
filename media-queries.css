@@ -115,8 +115,7 @@
       /* to allow scroll when needed */
       overflow-y: auto;
 
-      padding-top: 9.375rem;
-      padding-bottom: 6.25rem;
+      padding-block: 6.3rem;
 
       background-color: rgba(0, 0, 0, 0.9);
 

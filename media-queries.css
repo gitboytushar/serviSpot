@@ -135,6 +135,61 @@
       font-size: 1.5rem;
    }
 
+   /* USER ACCOUNT menu */
+
+   .nav-links ul li:nth-child(6) {
+      transform: translateX(.75rem);
+
+      pointer-events: none;
+      /* in-clickable */
+   }
+
+   /* Low Opacity of Account tab ONLY */
+   .nav-links ul li:nth-child(6) a.hover-link,
+   img.hover-link {
+      opacity: 0.6;
+   }
+
+   .dropdown-menu {
+      display: block;
+
+      transform: translateX(-1rem);
+
+      margin-top: 0.6rem;
+
+      /* these effects aren't required here */
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+      border: none;
+      animation: none;
+   }
+
+   .dropdown-menu ul li a {
+
+      /* allowing the user click here */
+      pointer-events: all;
+
+      width: 110% !important;
+
+      padding: 1rem;
+
+      margin-inline: 0;
+      margin-bottom: 1rem;
+
+      font-size: 1.3rem;
+
+      border: 0.0625rem solid white;
+   }
+
+   .dropdown-menu ul li {
+      margin-block: 0;
+   }
+
+   .dropdown-menu img {
+      width: 1.25rem;
+   }
+
+   /* NEXT SECTIONS */
    .header-section {
       justify-content: center;
       margin-top: 0;

@@ -468,6 +468,8 @@ ul {
 
 .item12 {
    grid-area: 3 / 4 / 3 / 5;
+   width: 4.2rem;
+   margin-left: 1rem;
 }
 
 /* services section */

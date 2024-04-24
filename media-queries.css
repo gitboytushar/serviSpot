@@ -522,6 +522,11 @@
       margin-left: 27%;
    }
 
+   .item12 {
+      width: 3rem;
+      margin-left: 1.72rem;
+   }
+
    /* service section */
    .services-section {
       background-color: var(--secondary-bg-color);

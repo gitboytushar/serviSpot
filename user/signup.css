@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+
+   /* check css layout */
+   /* outline: 1px solid red; */
+}
+
+body {
+   background-color: black;
+}
+
+/* color resets */
+
+:root {
+   --title-color: #ffffff;
+   --sub-title-color: #ffffff;
+
+   --label-color: rgba(255, 255, 255, 0.9);
+   --input-text-color: #ffffff;
+   --input-placeholder-color: rgba(255, 255, 255, 0.2);
+
+   --highlighter-color: #fe842d;
+   --highlighter-hover-color: rgb(255, 106, 0);
+
+   --google-btn-bg-color: #ffffff;
+   --google-btn-text-color: #000000;
+
+   --input-field-bg-color: rgba(255, 255, 255, 0.1);
+   --input-field-outline-color: rgba(255, 255, 255, 0.1);
+}
+
+/* utilities */
+
+h1,
+h2 {
+   font-family: "Montserrat", sans-serif;
+   font-optical-sizing: auto;
+   font-style: normal;
+}
+
+p {
+   font-family: "Roboto", sans-serif;
+   font-style: normal;
+}
+
+.flex {
+   display: flex;
+   align-items: center;
+}
+
+button {
+   border: none;
+   background: none;
+   padding: 0;
+
+   appearance: none;
+
+   cursor: pointer;
+}
+
+a {
+   text-decoration: none;
+   background: none;
+
+   color: var(--text-color);
+
+   cursor: pointer;
+}
+
+.container {
+   width: 724px;
+   height: 454px;
+
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+
+   padding: 0;
+   margin: 0;
+
+   border: 1px solid rgba(250, 250, 250, 0.2);
+   border-radius: 20px;
+
+   /* glass effect */
+   background-color: rgba(0, 0, 0, 0.8);
+   backdrop-filter: blur(50px);
+}
+
+/* close button */
+
+.close-btn {
+   position: absolute;
+   top: 30px;
+   right: 30px;
+}
+
+/* titles and background image */
+
+.base {
+   flex-direction: column;
+
+   position: absolute;
+   top: 49px;
+   left: 285px;
+   right: 26px;
+   bottom: 0;
+}
+
+.title {
+   color: var(--title-color);
+
+   font-size: 25px;
+   font-weight: 800;
+
+   width: 100%;
+
+   text-align: center;
+
+   margin-bottom: 6px;
+}
+
+.sub-title {
+   color: var(--sub-title-color);
+
+   font-size: 15px;
+   font-weight: 400;
+
+   width: 100%;
+
+   text-align: center;
+
+   margin-bottom: 34px;
+}
+
+/* user form */
+
+.box {
+   flex-direction: column;
+   justify-content: left;
+
+   width: 250px;
+   height: 326px;
+
+   position: absolute;
+   top: 75px;
+   left: 44px;
+   bottom: 53px;
+   right: 430px;
+}
+
+.mail-label,
+.pwd-label {
+   color: var(--label-color);
+
+   font-size: 15px;
+   font-weight: 500;
+
+   margin-bottom: 5px;
+}
+
+.pwd-label {
+   margin-top: 15px;
+}
+
+input {
+   width: 250px;
+   height: 40px;
+
+   padding: 10px;
+   font-size: 14px;
+
+   border: 1px solid var(--input-field-outline-color);
+   border-radius: 5px;
+
+   color: var(--input-text-color);
+   background-color: var(--input-field-bg-color);
+}
+
+input::placeholder {
+   color: var(--input-placeholder-color);
+}
+
+input:focus {
+   outline: none;
+}
+
+.option {
+   color: var(--input-text-color);
+
+   font-size: 11px;
+   font-weight: 300;
+
+   margin-top: 10px;
+}
+
+.option span {
+   font-weight: 500;
+
+   color: var(--highlighter-color);
+
+   margin-left: 2px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+   .option span:hover {
+      text-decoration: 0.2px underline;
+   }
+}
+
+.sign-up-btn {
+   position: relative;
+   left: 50%;
+   transform: translateX(-50%);
+
+   text-align: center;
+
+   width: 70px;
+   height: 28px;
+
+   font-size: 10px;
+   font-weight: 800;
+
+   border-radius: 5px;
+
+   color: var(--input-text-color);
+   background-color: var(--highlighter-color);
+
+   margin-top: 29px;
+   margin-bottom: 28px;
+
+   transition: background-color 0.3s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+   .sign-up-btn:hover{
+      background-color: var(--highlighter-hover-color);
+   }
+}
+
+.google-opt {
+   justify-content: center;
+   gap: 7px;
+
+   width: 180px;
+   height: 40px;
+
+   padding: 10px 14px;
+
+   border-radius: 5px;
+
+   font-size: 14px;
+   font-weight: 400px;
+
+   color: var(--google-btn-text-color);
+   background-color: var(--google-btn-bg-color);
+
+   margin-top: 28px;
+}

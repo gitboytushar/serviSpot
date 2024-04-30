@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>user sign up</title>
+   <link rel="stylesheet" href="./signup.css">
+</head>
+<body>
+   <!-- sign up modal -->
+   <div class="container">
+      
+      <!-- close modal button -->
+      <button class="close-btn">
+         <img src="../assets/Cancel btn.svg" alt="close modal button">
+      </button>
+
+      <!-- title and image -->
+      <div class="base flex">
+         <h1 class="title">SIGN UP</h1>
+         <h2 class="sub-title">Create profile to use services</h2>
+
+         <img src="../assets/signup-image.svg" alt="sign up graphic">
+      </div>
+
+      <!-- user form -->
+      <form action="">
+         <div class="box flex">
+
+            <div class="user-entry">
+               <p class="mail-label">Email id</p>
+               <input type="text" placeholder="sample@gmail.com" required>
+
+               <p class="pwd-label">Password</p>
+               <input type="text" placeholder="create password" required>
+
+               <p class="option">
+                  Already have an account? <span><a href="#">Sign in</a></span>
+               </p>
+
+               <button class="sign-up-btn">SIGN UP</button>
+            </div>
+
+            <img src="../assets/seperator.svg" alt="OR seperator">
+
+            <button class="google-opt flex">
+               <img src="../assets/google-icon 2.svg" alt="google icon">
+               <p>Sign up with Google</p>
+            </button>
+
+         </div>
+      </form>
+   </div>
+</body>
+</html>

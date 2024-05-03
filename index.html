@@ -13,6 +13,7 @@
    <!-- custom stylesheets -->
    <link rel="stylesheet" href="./style.css">
    <link rel="stylesheet" href="./media-queries.css">
+   <link rel="stylesheet" href="./signup.css">
 
    <!-- Google tag (gtag.js) - Google Analytics -->
    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KRTG8ZKS5K"></script>
@@ -54,9 +55,9 @@
 
                      <div class="dropdown-menu" id="accountDropdown">
                         <ul>
-                           <li><a class="sub-hover-link" href="#1">Sign up <img src="./assets/signUpLogo.svg"
+                           <li><a class="sub-hover-link signup-btn">Sign up <img src="./assets/signUpLogo.svg"
                                     alt="signUp icon"></a></li>
-                           <li><a class="sub-hover-link" href="#2">Sign in <img src="./assets/signInLogo.svg"
+                           <li><a class="sub-hover-link signin-btn">Sign in <img src="./assets/signInLogo.svg"
                                     alt="signIn icon"></a></li>
                         </ul>
                      </div>
@@ -71,6 +72,50 @@
          </div>
       </div>
    </nav>
+
+   <!-- sign up MODAL -->
+   <div class="overlay"></div>
+   <div class="signup-container">
+   
+      <!-- back to home button -->
+      <button class="close-btn" onclick="closeModal()">
+         <img src="../assets/Cancel btn.svg" alt="close button">
+      </button>
+   
+      <!-- title and image -->
+      <div class="base flex">
+         <h1 class="title">SIGN UP</h1>
+         <h2 class="sub-title">Create profile to use services</h2>
+   
+         <img src="../assets/signup-image.svg" alt="sign up graphic">
+      </div>
+   
+      <!-- user form -->
+      <form action="">
+         <div class="user-ip-box flex">
+            <div class="user-entry">
+               <p class="mail-label">Email id</p>
+               <input type="text" placeholder="sample@gmail.com" required>
+   
+               <p class="pwd-label">Password</p>
+               <input type="text" placeholder="create password" required>
+   
+               <p class="option">
+                  Already have an account? <span><a href="#">Sign in</a></span>
+               </p>
+   
+               <button class="sign-up-btn">SIGN UP</button>
+            </div>
+   
+            <img src="../assets/seperator.svg" alt="OR seperator">
+   
+            <button class="google-opt flex">
+               <img src="../assets/google-icon 2.svg" alt="google icon">
+               <p>Sign up with Google</p>
+            </button>
+         </div>
+      </form>
+   </div>
 
    <!-- hero section -->
    <header id="home">
@@ -88,7 +133,7 @@
             <p class="intro-text-in-mobile">Here you'll find a variety of services all in one
                place. Our goal is to make your daily decisions easier and
                quicker.</p>
-            <a class="cta-btn" onclick="scrollToSection3('section3')">Start for free</a>
+            <a class="cta-btn" onclick="showSignupModal()">Start for free</a>
          </div>
 
          <div class="header-right">
@@ -222,6 +267,24 @@
    <script src="./scroll2section.js"></script>
    <script src="./menu-toggle.js"></script>
    <script src="./account-btn.js"></script>
+
+   <!-- function to open and close the user authentication modals -->
+   <script>
+      function showSignupModal(){
+         document.querySelector('.overlay').classList.add('show-overlay')
+         document.querySelector('.signup-container').classList.add('show-signup-container')
+      }
+
+      // called when user clicks on the close-btn in modal
+      function closeModal(){
+         document.querySelector('.overlay').classList.remove('show-overlay')
+         document.querySelector('.signup-container').classList.remove('show-signup-container')
+      }
+
+      // when sign-up-btn is clicked in account-nav-link
+      var signup_btn =  document.querySelector(".signup-btn");
+      signup_btn.addEventListener("click", showSignupModal);
+   </script>
 </body>
 
 </html>

@@ -6,6 +6,7 @@
    <meta charset="UTF-8">
    <!-- last-property disables the default zooming when user clicks on something in mobiles -->
    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
    <!-- google adsense meta tag with / at the end -->
    <meta name="google-adsense-account" content="ca-pub-2379418646926058" />
 
@@ -16,6 +17,9 @@
    <link rel="stylesheet" href="./media-queries.css">
    <link rel="stylesheet" href="./signup.css">
    <link rel="stylesheet" href="./signin.css">
+
+   <!-- google fonts icon: for user sign out option in navlinks -->
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0"/>
 
    <!-- Google tag (gtag.js) - Google Analytics -->
    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KRTG8ZKS5K"></script>
@@ -61,6 +65,7 @@
                                     alt="signUp icon"></a></li>
                            <li><a class="sub-hover-link signin-btn">Sign in <img src="./assets/signInLogo.svg"
                                     alt="signIn icon"></a></li>
+                           <li><a class="signout-btn">Sign out <span class="material-symbols-outlined">logout</span> </a></li>
                         </ul>
                      </div>
                   </li>
@@ -78,39 +83,38 @@
    <!-- sign up MODAL -->
    <div class="overlay"></div>
    <div class="signup-container">
-   
       <!-- back to home button -->
       <button class="close-btn" onclick="closeSignupModal()">
          <img src="../assets/Cancel btn.svg" alt="close button">
       </button>
-   
+
       <!-- title and image -->
       <div class="base flex">
          <h1 class="title">SIGN UP</h1>
          <h2 class="sub-title">Create profile to use services</h2>
-   
+
          <img src="../assets/signup-image.svg" alt="sign up graphic">
       </div>
-   
+
       <!-- user form -->
       <form action="">
          <div class="user-ip-box flex">
             <div class="user-entry">
                <p class="mail-label">Email id</p>
-               <input type="text" placeholder="sample@gmail.com" required>
-   
+               <input type="email" placeholder="sample@gmail.com" id="signup-email" required>
+
                <p class="pwd-label">Password</p>
-               <input type="text" placeholder="create a password" required>
-   
+               <input type="password" placeholder="create a password" d="signup-password" required>
+
                <p class="option">
                   Already have an account? <span><a class="jump2signin" onclick="showSigninModal()">Sign in</a></span>
                </p>
-   
+
                <button class="sign-up-btn">SIGN UP</button>
             </div>
-   
+
             <img src="../assets/seperator.svg" alt="OR seperator">
-   
+
             <button class="google-opt flex">
                <img src="../assets/google-icon 2.svg" alt="google icon">
                <p>Sign up with Google</p>
@@ -122,39 +126,38 @@
    <!-- sign in MODAL -->
    <div class="overlay"></div>
    <div class="signin-container">
-   
       <!-- back to home button -->
       <button class="close-btn" onclick="closeSigninModal()">
          <img src="../assets/Cancel btn.svg" alt="close button">
       </button>
-   
+
       <!-- title and image -->
       <div class="base flex">
          <h1 class="title">SIGN IN</h1>
          <h2 class="sub-title">You can use the services now.</h2>
-   
+
          <img src="../assets/signup-image.svg" alt="sign up graphic">
       </div>
-   
+
       <!-- user form -->
       <form action="">
          <div class="user-ip-box flex">
             <div class="user-entry">
                <p class="mail-label">Email id</p>
-               <input type="text" placeholder="sample@gmail.com" required>
-   
+               <input type="email" placeholder="sample@gmail.com" id="signin-email" required>
+
                <p class="pwd-label">Password</p>
-               <input type="text" placeholder="enter your password" required>
-   
+               <input type="password" placeholder="enter your password" id="signin-password" required>
+
                <p class="option">
                   Don't have an account? <span><a class="jump2signup" onclick="showSignupModal()">Sign up</a></span>
                </p>
-   
+
                <button class="sign-in-btn">SIGN IN</button>
             </div>
-   
+
             <img src="../assets/seperator.svg" alt="OR seperator">
-   
+
             <button class="google-opt flex">
                <img src="../assets/google-icon 2.svg" alt="google icon">
                <p>Sign in with Google</p>
@@ -243,7 +246,8 @@
                alt="google adsense logo">
             <img class="item11 icon-width" src="./assets/serviceIcons/google-analytics-icon.svg"
                alt="google analytics logo">
-            <img class="item12 icon-width" src="./assets/serviceIcons/google-firebase-icon.svg" alt="google firebase logo">
+            <img class="item12 icon-width" src="./assets/serviceIcons/google-firebase-icon.svg"
+               alt="google firebase logo">
          </div>
       </div>
    </section>

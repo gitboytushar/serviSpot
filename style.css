@@ -227,6 +227,7 @@ ul {
    padding-bottom: 0.3125rem;
    padding-inline: 1.25rem;
 
+   background-color: rgba(0, 0, 0, 0.2);
    backdrop-filter: blur(6.25rem);
    -webkit-backdrop-filter: blur(6.25rem);
 
@@ -267,6 +268,39 @@ ul {
       color: var(--heading-text-color1);
       transform: translateX(0.125rem);
    }
+}
+
+/* sign out button hidden by-default: available when user signed in */
+.signout-btn {
+   font-weight: 500;
+   font-size: 18px;
+
+   display: none !important;
+
+   color: var(--navbar-text-color);
+
+   cursor: pointer;
+
+   transition: all 0.1s ease;
+}
+
+.show-signout-btn {
+   display: block;
+}
+
+@media (hover: hover) and (pointer: fine) {
+   .signout-btn:hover {
+      color: var(--heading-text-color1);
+      transform: translateX(0.125rem);
+   }
+}
+
+.signout-btn span {
+   color: white !important;
+}
+
+.dropdown-menu .signout-btn {
+   margin-inline: 0rem;
 }
 
 /* hero section */

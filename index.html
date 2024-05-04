@@ -15,6 +15,7 @@
    <link rel="stylesheet" href="./style.css">
    <link rel="stylesheet" href="./media-queries.css">
    <link rel="stylesheet" href="./signup.css">
+   <link rel="stylesheet" href="./signin.css">
 
    <!-- Google tag (gtag.js) - Google Analytics -->
    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KRTG8ZKS5K"></script>
@@ -79,7 +80,7 @@
    <div class="signup-container">
    
       <!-- back to home button -->
-      <button class="close-btn" onclick="closeModal()">
+      <button class="close-btn" onclick="closeSignupModal()">
          <img src="../assets/Cancel btn.svg" alt="close button">
       </button>
    
@@ -99,10 +100,10 @@
                <input type="text" placeholder="sample@gmail.com" required>
    
                <p class="pwd-label">Password</p>
-               <input type="text" placeholder="create password" required>
+               <input type="text" placeholder="create a password" required>
    
                <p class="option">
-                  Already have an account? <span><a href="#">Sign in</a></span>
+                  Already have an account? <span><a class="jump2signin" onclick="showSigninModal()">Sign in</a></span>
                </p>
    
                <button class="sign-up-btn">SIGN UP</button>
@@ -113,6 +114,50 @@
             <button class="google-opt flex">
                <img src="../assets/google-icon 2.svg" alt="google icon">
                <p>Sign up with Google</p>
+            </button>
+         </div>
+      </form>
+   </div>
+
+   <!-- sign in MODAL -->
+   <div class="overlay"></div>
+   <div class="signin-container">
+   
+      <!-- back to home button -->
+      <button class="close-btn" onclick="closeSigninModal()">
+         <img src="../assets/Cancel btn.svg" alt="close button">
+      </button>
+   
+      <!-- title and image -->
+      <div class="base flex">
+         <h1 class="title">SIGN IN</h1>
+         <h2 class="sub-title">You can use the services now.</h2>
+   
+         <img src="../assets/signup-image.svg" alt="sign up graphic">
+      </div>
+   
+      <!-- user form -->
+      <form action="">
+         <div class="user-ip-box flex">
+            <div class="user-entry">
+               <p class="mail-label">Email id</p>
+               <input type="text" placeholder="sample@gmail.com" required>
+   
+               <p class="pwd-label">Password</p>
+               <input type="text" placeholder="enter your password" required>
+   
+               <p class="option">
+                  Don't have an account? <span><a class="jump2signup" onclick="showSignupModal()">Sign up</a></span>
+               </p>
+   
+               <button class="sign-in-btn">SIGN IN</button>
+            </div>
+   
+            <img src="../assets/seperator.svg" alt="OR seperator">
+   
+            <button class="google-opt flex">
+               <img src="../assets/google-icon 2.svg" alt="google icon">
+               <p>Sign in with Google</p>
             </button>
          </div>
       </form>
@@ -263,29 +308,12 @@
       </a>
    </div>
 
-   <!-- javascript and cdn links -->
+   <!-- important javascripts :) -->
    <script src="https://cdn.lordicon.com/lordicon.js"></script>
    <script src="./scroll2section.js"></script>
    <script src="./menu-toggle.js"></script>
    <script src="./account-btn.js"></script>
-
-   <!-- function to open and close the user authentication modals -->
-   <script>
-      function showSignupModal(){
-         document.querySelector('.overlay').classList.add('show-overlay')
-         document.querySelector('.signup-container').classList.add('show-signup-container')
-      }
-
-      // called when user clicks on the close-btn in modal
-      function closeModal(){
-         document.querySelector('.overlay').classList.remove('show-overlay')
-         document.querySelector('.signup-container').classList.remove('show-signup-container')
-      }
-
-      // when sign-up-btn is clicked in account-nav-link
-      var signup_btn =  document.querySelector(".signup-btn");
-      signup_btn.addEventListener("click", showSignupModal);
-   </script>
+   <script src="./modals.js"></script>
 </body>
 
 </html>

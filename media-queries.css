@@ -99,6 +99,16 @@
    .nav-toggle {
       display: block;
       z-index: 100;
+
+      position: relative;
+      right: 3%;
+
+      /* Hiding tap effect in mobile browsers */
+      -webkit-tap-highlight-color: transparent;
+   }
+
+   .project-logo {
+      transform: translateY(-4px);
    }
 
    /* hamburger menu */
@@ -137,10 +147,10 @@
    /* USER ACCOUNT menu */
 
    .nav-links ul li:nth-child(6) {
-      transform: translateX(.75rem);
+      transform: translateX(0.75rem);
 
-      pointer-events: none;
       /* in-clickable */
+      pointer-events: none;
    }
 
    /* Low Opacity of Account tab ONLY */
@@ -178,6 +188,7 @@
       font-size: 1.3rem;
 
       border: 0.0625rem solid white;
+      border-radius: 10px;
    }
 
    .dropdown-menu ul li {
@@ -230,6 +241,8 @@
       height: 2.8125rem;
 
       font-size: 1.1rem;
+
+      border-radius: 0.3125rem;
    }
 
    .icons {
@@ -275,6 +288,10 @@
 
 /* for tablets */
 @media screen and (max-width: 48rem) {
+   .nav-toggle {
+      right: 4%;
+   }
+
    .container {
       padding-inline: 3.125rem;
    }
@@ -300,10 +317,10 @@
    }
 
    .cta-btn {
-      width: 8.5rem;
+      width: fit-content;
       height: 2.3rem;
 
-      font-size: 0.8rem;
+      font-size: 0.9875rem;
       font-weight: 400;
    }
 
@@ -398,6 +415,14 @@
 
 /* for large Mobiles */
 @media screen and (max-width: 26.875rem) {
+   .nav-toggle {
+      right: 7%;
+   }
+
+   .project-logo {
+      transform: translateY(-2px);
+   }
+
    .container {
       padding-inline: 1.875rem;
    }
@@ -409,10 +434,6 @@
 
       border-bottom-left-radius: 1.5625rem;
       border-bottom-right-radius: 1.5625rem;
-   }
-
-   .project-logo {
-      margin: 0;
    }
 
    /* hero section */
@@ -472,7 +493,8 @@
    }
 
    .cta-btn {
-      width: 50%;
+      width: fit-content;
+      padding-inline: 1.25rem;
 
       font-size: 1.1rem;
       font-weight: 400;
@@ -583,7 +605,7 @@
       margin-top: 1.25rem;
       margin-bottom: 1.25rem;
       margin-left: 0;
-      margin-right: 60%;
+      margin-right: 57%;
    }
 
    /* footer section */
@@ -603,6 +625,10 @@
 
 /* for medium Mobiles */
 @media screen and (max-width: 23.4375rem) {
+   .nav-toggle {
+      right: 8%;
+   }
+
    .header-section {
       padding-bottom: 1.5625rem;
    }
@@ -625,6 +651,7 @@
    .cta-btn {
       font-size: 0.875rem;
       width: fit-content;
+      padding-inline: 1.25rem;
    }
 
    /* features section */
@@ -674,6 +701,10 @@
 
 /* for small Mobiles */
 @media screen and (max-width: 20rem) {
+   .nav-toggle {
+      right: 9%;
+   }
+
    .container {
       padding-inline: 1.25rem;
    }
@@ -697,7 +728,7 @@
    .cta-btn {
       font-size: 0.9rem;
       padding: 0;
-      padding-inline: 0.9375rem;
+      padding-inline: 1.25rem;
    }
 
    /* features section */

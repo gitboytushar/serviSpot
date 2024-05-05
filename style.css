@@ -115,7 +115,7 @@ ul {
    padding-inline: 1.875rem;
    padding-block: 0.8125rem;
 
-   border-radius: 3.125rem;
+   border-radius: 0.625rem;
 
    text-shadow: 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.35);
 
@@ -193,6 +193,10 @@ ul {
 
 .nav-toggle {
    display: none;
+}
+
+.nav-toggle .material-symbols-rounded {
+   font-size: 50px;
 }
 
 /* fade in animation for dropdown menu */
@@ -273,7 +277,7 @@ ul {
 /* sign out button hidden by-default: available when user signed in */
 .signout-btn {
    font-weight: 500;
-   font-size: 18px;
+   font-size: 1.125rem;
 
    display: none !important;
 
@@ -562,7 +566,7 @@ ul {
 .content p {
    font-size: 1.25rem;
    width: 25rem;
-   text-align: justify;
+   text-align: left;
    line-height: 1.25;
 }
 
@@ -572,7 +576,7 @@ ul {
 
 .content a {
    height: 2.5625rem;
-   width: 11.875rem;
+   width: fit-content;
 
    padding-block: 0.75rem;
    padding-inline: 1.5625rem;
@@ -581,7 +585,7 @@ ul {
    font-weight: 400;
 
    margin-top: 4.125rem;
-   margin-left: 53%;
+   margin-left: 65%;
 }
 
 /* footer section */

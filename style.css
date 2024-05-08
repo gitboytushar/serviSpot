@@ -555,6 +555,11 @@ ul {
    height: 26.5rem;
 }
 
+.service .s3-icon {
+   width: 23rem;
+   height: 23rem;
+}
+
 .content {
    flex-direction: column;
 }
@@ -593,14 +598,19 @@ ul {
 }
 
 /* user can use services only when he signs in  */
-.service-btn1, .service-btn2 {
+.service-btn1,
+.service-btn2,
+.service-btn3 {
    pointer-events: none;
    cursor: not-allowed;
 
    filter: grayscale(100%);
    opacity: 0.5;
 }
-.service-btn1.active, .service-btn2.active {
+
+.service-btn1.active,
+.service-btn2.active,
+.service-btn3.active {
    pointer-events: all;
    cursor: pointer;
 

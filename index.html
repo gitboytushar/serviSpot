@@ -2,13 +2,9 @@
 <html lang="en" loading="lazy">
 
 <head>
-
    <meta charset="UTF-8">
    <!-- last-property disables the default zooming when user clicks on something like input fields on mobiles -->
    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-
-   <!-- google adsense meta tag with / at the end -->
-   <meta name="google-adsense-account" content="ca-pub-2379418646926058" />
 
    <title>ServiSpot Homepage</title>
 
@@ -33,11 +29,6 @@
 
       gtag('config', 'G-KRTG8ZKS5K');
    </script>
-
-   <!-- google adsense script tag -->
-   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2379418646926058"
-      crossorigin="anonymous"></script>
-
 </head>
 
 <body>
@@ -66,9 +57,12 @@
 
                      <div class="dropdown-menu" id="accountDropdown">
                         <ul>
-                           <li><a class="sub-hover-link signup-btn">Sign up <img src="./assets/signUpLogo.svg" alt="signUp icon"></a></li>
-                           <li><a class="sub-hover-link signin-btn">Sign in <img src="./assets/signInLogo.svg" alt="signIn icon"></a></li>
-                           <li><a class="signout-btn">Sign out <span class="material-symbols-outlined">logout</span></a></li>
+                           <li><a class="sub-hover-link signup-btn">Sign up <img src="./assets/signUpLogo.svg"
+                                    alt="signUp icon"></a></li>
+                           <li><a class="sub-hover-link signin-btn">Sign in <img src="./assets/signInLogo.svg"
+                                    alt="signIn icon"></a></li>
+                           <li><a class="signout-btn">Sign out <span class="material-symbols-outlined">logout</span></a>
+                           </li>
                         </ul>
                      </div>
                   </li>
@@ -106,10 +100,10 @@
          <div class="user-ip-box flex">
             <div class="user-entry">
                <p class="mail-label">Email id</p>
-               <input type="email" placeholder="sample@gmail.com" id="rEmail" required>
+               <input type="email" placeholder="sample@gmail.com" id="rEmail" required autocomplete="on">
 
                <p class="pwd-label">Password</p>
-               <input type="password" placeholder="create a password" id="rPassword" required>
+               <input type="password" placeholder="create a password" id="rPassword" required autocomplete="off">
 
                <p class="option">
                   Already have an account? <span><a class="jump2signin" onclick="showSigninModal()">Sign in</a></span>
@@ -120,9 +114,9 @@
 
             <img src="./assets/seperator.svg" alt="OR seperator">
 
-            <button class="google-opt flex">
+            <button class="google-opt flex" id="googleSignUp">
                <img src="./assets/google-color-icon.svg" alt="google icon">
-               <p>Sign up with Google</p>
+               <p>Sign in with Google</p>
             </button>
          </div>
       </form>
@@ -152,10 +146,11 @@
          <div class="user-ip-box flex">
             <div class="user-entry">
                <p class="mail-label">Email id</p>
-               <input type="email" placeholder="sample@gmail.com" id="signin-email" required>
+               <input type="email" placeholder="sample@gmail.com" id="signin-email" required autocomplete="on">
 
                <p class="pwd-label">Password</p>
-               <input type="password" placeholder="enter your password" id="signin-password" required>
+               <input type="password" placeholder="enter your password" id="signin-password" required
+                  autocomplete="off">
 
                <p class="option">
                   Don't have an account? <span><a class="jump2signup" onclick="showSignupModal()">Sign up</a></span>
@@ -166,7 +161,7 @@
 
             <img src="./assets/seperator.svg" alt="OR seperator">
 
-            <button class="google-opt flex">
+            <button class="google-opt flex" id="googleSignIn">
                <img src="./assets/google-color-icon.svg" alt="google icon">
                <p>Sign in with Google</p>
             </button>
@@ -183,10 +178,13 @@
             </div>
             <h1>Explore. <br> Evaluate. Elevate.</h1>
 
-            <p class="intro-text">Welcome to our multi-service platform, where you'll discover a range of services to try. Our mission is to ensure a seamless user experience as you navigate through our website. Simply sign up for free to begin exploring and
-            leveraging our platform's offerings.</p>
+            <p class="intro-text">Welcome to our multi-service platform, where you'll discover a range of services to
+               try. Our mission is to ensure a seamless user experience as you navigate through our website. Simply sign
+               up for free to begin exploring and
+               leveraging our platform's offerings.</p>
 
-            <p class="intro-text-in-mobile">Take a look a around what we have. Our goal is to provide you a seemless multi-service platform.</p>
+            <p class="intro-text-in-mobile">Take a look a around what we have. Our goal is to provide you a seemless
+               multi-service platform.</p>
 
             <a class="cta-btn signup-btn" onclick="showSignupModal()">Get Started</a>
          </div>
@@ -263,7 +261,7 @@
       <div class="container">
          <h2>Some Services we offer</h2>
          <div class="cards flex">
-            <!-- service number 1 -->
+            <!-- service number 1: Car price predictor-->
             <div class="service flex">
                <lord-icon src="https://cdn.lordicon.com/tobyjxpr.json" trigger="hover" stroke="light"
                   colors="primary:#ed6417,secondary:#f4f19c">
@@ -277,7 +275,7 @@
                   <a href="http://54.191.121.185:5000/" class="cta-btn service-btn1">Try it Now</a>
                </div>
             </div>
-            <!-- service number 2 -->
+            <!-- service number 2: current weather web app -->
             <div class="service flex">
                <lord-icon src="https://cdn.lordicon.com/odvkctyp.json" trigger="hover" stroke="light"
                   colors="primary:#ed6417,secondary:#f4f19c">
@@ -290,6 +288,19 @@
                      <span class="highlighted-text">OpenWeatherMap API</span> for accurate forecasts of any region.
                   </p>
                   <a href="https://weather-app-nine-ochre.vercel.app/" class="cta-btn service-btn2">Try it Now</a>
+               </div>
+            </div>
+            <!-- service number 3: currency converter -->
+            <div class="service flex">
+               <lord-icon class="s3-icon" src="https://cdn.lordicon.com/szxisgie.json" trigger="hover" stroke="light"
+                  colors="primary:#ec6318,secondary:#f3f19c">
+               </lord-icon>
+               <div class="content flex">
+                  <p class="subheading">Currency Converter</p>
+                  <p>Convert currencies instantly! This web app offers <span class="highlighted-text">fast
+                        conversions</span> with a clean interface. No more calculations, just enter and go!
+                  </p>
+                  <a href="https://jyotroops.github.io/CurrencyConverter/" class="cta-btn service-btn3">Try it Now</a>
                </div>
             </div>
          </div>

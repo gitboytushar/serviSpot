@@ -1,6 +1,16 @@
 // Import functions from firebase sdk as per requirements
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js'
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from 'https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js'
+
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  onAuthStateChanged,
+  signOut,
+  GoogleAuthProvider,
+  signInWithPopup
+} from 'https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js'
+
 import { getFirestore, setDoc, doc } from 'https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js'
 
 // Firebase configurations
@@ -14,8 +24,10 @@ const firebaseConfig = {
 }
 
 const app = initializeApp(firebaseConfig) // Initialize app with configurations
+
 const auth = getAuth()
-const db = getFirestore()
+auth.languageCode = 'en';
+const provider = new GoogleAuthProvider(); // User choice to Sign in with google button
 
 // ----------------------------------- Custom Functions --------------------------------------
 
@@ -50,6 +62,7 @@ function changeThings(userLoggedIn) {
   const showSignOutToUser = document.querySelector('.signout-btn')
   const serviceBtn1 = document.querySelector('.cta-btn.service-btn1')
   const serviceBtn2 = document.querySelector('.cta-btn.service-btn2')
+  const serviceBtn3 = document.querySelector('.cta-btn.service-btn3')
 
   if (userLoggedIn) {
     showSignUpToUser.style.display = 'none'
@@ -62,6 +75,7 @@ function changeThings(userLoggedIn) {
     // activate service buttons
     serviceBtn1.classList.add('active')
     serviceBtn2.classList.add('active')
+    serviceBtn3.classList.add('active')
   } else {
     showSignUpToUser.style.display = 'flex'
     showSignUpCTA.style.display = 'flex'
@@ -73,14 +87,15 @@ function changeThings(userLoggedIn) {
     // de-activate service buttons
     serviceBtn1.classList.remove('active')
     serviceBtn2.classList.remove('active')
+    serviceBtn3.classList.remove('active')
   }
 }
 
-// ------------------------------ Registration (Signing Up) ------------------------------
+// --------------------------------------------------- Registration • Firestore Sign up ----------------------------------------------
 const signUp = document.getElementById('submitSignUp')
 
 signUp.addEventListener('click', event => {
-  event.preventDefault()
+  event.preventDefault() // page don't reload itself
 
   const email = document.getElementById('rEmail').value
   const password = document.getElementById('rPassword').value
@@ -99,7 +114,7 @@ signUp.addEventListener('click', event => {
       // green background for success alert
       document.getElementById('signUpMessage').classList.remove('error');
       document.getElementById('signUpMessage').classList.add('success');
-      showMessage('Account Created Successfully', 'signUpMessage')
+      showMessage('Account Created Successfully.', 'signUpMessage')
 
       const docRef = doc(db, 'users', user.uid)
 
@@ -118,13 +133,13 @@ signUp.addEventListener('click', event => {
     .catch(error => {
       const errorCode = error.code
       if (errorCode == 'auth/email-already-in-use') {
-        showMessage('Email Address Already Exists !!!', 'signUpMessage')
+        showMessage('Email Address Already Exists!', 'signUpMessage')
       } else if (errorCode === 'auth/weak-password') {
-        showMessage('WEAK Password: Password should be at least 6 characters', 'signUpMessage')
+        showMessage('WEAK Password: Minimum length is 6 characters', 'signUpMessage')
       } else if (errorCode === 'auth/invalid-email') {
         showMessage('Invalid Email Address!', 'signUpMessage')
       } else {
-        showMessage('Unable to create User', 'signUpMessage')
+        showMessage('Unable to create User :(', 'signUpMessage')
       }
       // red background for error alert
       document.getElementById('signUpMessage').classList.remove('success');
@@ -132,11 +147,11 @@ signUp.addEventListener('click', event => {
     })
 })
 
-// ------------------------------ Authentication (Signing In) ------------------------------
+// ------------------------------------------------- Authentication • Firestore Sign in ---------------------------------------------
 const signIn = document.getElementById('submitSignIn')
 
 signIn.addEventListener('click', (event) => {
-  event.preventDefault() // page don't reload by default
+  event.preventDefault()
 
   const email = document.getElementById('signin-email').value
   const password = document.getElementById('signin-password').value
@@ -144,7 +159,7 @@ signIn.addEventListener('click', (event) => {
   const auth = getAuth()
 
   signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
-    showMessageSignIn('Login is Successful!', 'signInMessage')
+    showMessageSignIn('Login Successful.', 'signInMessage')
 
     // green background alert
     document.getElementById('signInMessage').classList.remove('error');
@@ -163,7 +178,7 @@ signIn.addEventListener('click', (event) => {
     if (errorCode === 'auth/invalid-credential') {
       showMessageSignIn('Incorrect Email or Password.', 'signInMessage')
     } else {
-      showMessageSignIn('Account does NOT exist!', 'signInMessage')
+      showMessageSignIn('Account does Not Exist !!!', 'signInMessage')
     }
 
     // red background for error alert
@@ -172,13 +187,37 @@ signIn.addEventListener('click', (event) => {
   })
 })
 
-// ------------------------------ Logging Out ------------------------------
+// ------------------------------------------------------------------- Google Sign in ----------------------------------------------------
+const googleLoginSignUp = document.getElementById('googleSignUp')
+const googleLoginSignIn = document.getElementById('googleSignIn')
+function handleGoogleSignIn(event) {
+  event.preventDefault()
+
+  signInWithPopup(auth, provider)
+  .then((result) => {
+    const credential = GoogleAuthProvider.credentialFromResult(result);
+    const user = result.user;
+
+    // console.log(user) // for developer, chrome inspect console output
+    
+    localStorage.setItem('loggedInUserId', user.uid) // set uid in localStorage
+    window.location.reload()
+
+  }).catch((error) => {
+    const errorMessage = error.message;
+    console.error('Error in Google Sign In: ', errorMessage);
+  });
+}
+// Function called as per user scenario
+googleLoginSignUp.addEventListener('click', handleGoogleSignIn)
+googleLoginSignIn.addEventListener('click', handleGoogleSignIn)
+
+// ------------------------------------------------------------- Logging Out ------------------------------------------------------------
 const logoutButton = document.querySelector('.signout-btn')
 
 logoutButton.addEventListener('click', () => {
-  localStorage.removeItem('loggedInUserId') // remove uid from the localStorage
+  localStorage.removeItem('loggedInUserId') // delete uid from the localStorage
 
-  // signout current user
   signOut(auth).then(() => {
     window.location.reload()
   }).catch((error) => {
@@ -186,12 +225,12 @@ logoutButton.addEventListener('click', () => {
   })
 })
 
-// ------------------------------ User Access ------------------------------
+// -------------------------------------------------------------- User Access -----------------------------------------------------------
 onAuthStateChanged(auth, (user) => {
   const loggedInUserId = localStorage.getItem('loggedInUserId')
 
   if (loggedInUserId) {
-    changeThings(true) // activate services
+    changeThings(true) // activate services for user
   } else {
     changeThings(false)
     scrollToHome() // after logout scroll user to the page top :)

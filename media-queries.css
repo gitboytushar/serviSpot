@@ -107,7 +107,7 @@
    }
 
    .project-logo {
-      transform: translateY(-4px);
+      transform: translateY(-0.25rem);
    }
 
    /* hamburger menu */
@@ -187,7 +187,7 @@
       font-size: 1.3rem;
 
       border: 0.0625rem solid white;
-      border-radius: 10px;
+      border-radius: 0.625rem;
    }
 
    .dropdown-menu ul li {
@@ -393,10 +393,6 @@
       margin-left: 52.5%;
    }
 
-   .services-section {
-      height: 60rem;
-   }
-
    footer a {
       font-size: 1rem;
       margin-block: 1.3rem;
@@ -413,7 +409,7 @@
 
    /* fix position */
    .signout-btn {
-      transform: translateX(-6px) translateY(10px);
+      transform: translateX(-0.375rem) translateY(0.625rem);
    }
 }
 
@@ -424,7 +420,7 @@
    }
 
    .project-logo {
-      transform: translateY(-2px);
+      transform: translateY(-0.125rem);
    }
 
    .container {

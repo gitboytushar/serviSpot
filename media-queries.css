@@ -56,7 +56,6 @@
       font-size: 1.2rem;
       font-weight: 300;
       width: fit-content;
-      text-align: justify;
    }
 
    .cta-btn {
@@ -410,6 +409,11 @@
    .subfooter lord-icon {
       width: 2rem;
       height: 2rem;
+   }
+
+   /* fix position */
+   .signout-btn {
+      transform: translateX(-6px) translateY(10px);
    }
 }
 

@@ -1,53 +1,44 @@
-// Open and Closes the User Authentication modals
-
+// Open/Close the modals
 function showSignupModal() {
   document.querySelector('.overlay').classList.add('show-overlay')
-  document
-    .querySelector('.signup-container')
-    .classList.add('show-signup-container')
+  document.querySelector('.signup-container').classList.add('show-signup-container')
   document.body.style.overflow = 'hidden' // stops the homepage scrolling
 }
 
-function showSigninModal () {
+function showSigninModal() {
   document.querySelector('.overlay').classList.add('show-overlay')
-  document
-    .querySelector('.signin-container')
-    .classList.add('show-signin-container')
-  document.body.style.overflow = 'hidden' // stops the homepage scrolling
+  document.querySelector('.signin-container').classList.add('show-signin-container')
+  document.body.style.overflow = 'hidden'
 }
 
-// called when user clicks on the close-btn
-function closeSignupModal () {
+// User clicks close modal button
+function closeSignupModal() {
   document.querySelector('.overlay').classList.remove('show-overlay')
-  document
-    .querySelector('.signup-container')
-    .classList.remove('show-signup-container')
+  document.querySelector('.signup-container').classList.remove('show-signup-container')
   document.body.style.overflow = '' // restores that scrolling
 }
 
-function closeSigninModal () {
+function closeSigninModal() {
   document.querySelector('.overlay').classList.remove('show-overlay')
-  document
-    .querySelector('.signin-container')
-    .classList.remove('show-signin-container')
-  document.body.style.overflow = '' // restores that scrolling
+  document.querySelector('.signin-container').classList.remove('show-signin-container')
+  document.body.style.overflow = ''
 }
 
-// when sign-UP-btn is clicked in account-nav-links
+// sign-Up nav-links clicked in account
 var signup_btn = document.querySelector('.signup-btn')
 signup_btn.addEventListener('click', showSignupModal)
 
-// when sign-IN-btn is clicked in account-nav-links
+// sign-In nav-links clicked in account
 var signin_btn = document.querySelector('.signin-btn')
 signin_btn.addEventListener('click', showSigninModal)
 
-// Close the first modal and open the second modal when switching modals within the modal content
-document.querySelector('.jump2signin').addEventListener('click', function() {
+// switch between modal from links inside modals
+document.querySelector('.jump2signin').addEventListener('click', function () {
   closeSignupModal();
   showSigninModal();
 });
 
-document.querySelector('.jump2signup').addEventListener('click', function() {
+document.querySelector('.jump2signup').addEventListener('click', function () {
   closeSigninModal();
   showSignupModal();
 });

@@ -305,6 +305,54 @@ button {
    font-weight: 500;
 }
 
+/* alert message pop up for user */
+@keyframes fadeInOut {
+   0% {
+      opacity: 0;
+   }
+
+   10% {
+      opacity: 1;
+   }
+
+   90% {
+      opacity: 1;
+   }
+
+   100% {
+      opacity: 0;
+   }
+}
+
+.messageDiv {
+   color: white;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   padding-block: 0.25rem;
+   padding-inline: 0.625rem;
+   text-align: center;
+
+   border-top-left-radius: 1.25rem;
+   border-top-right-radius: 1.25rem;
+
+   font-size: 0.75rem;
+   letter-spacing: 0.0313rem;
+   font-weight: 400;
+
+   animation: fadeInOut 10s ease forwards;
+}
+
+.success {
+   background-color: hsl(120, 100%, 25%);
+}
+
+.error {
+   background-color: hsl(351, 100%, 26%);
+}
+
 /* Making the Sign modal responsive for mobiles */
 
 @media screen and (max-width: 26.875rem) {
@@ -371,6 +419,25 @@ button {
 
    .sign-up-btn:active {
       background-color: var(--highlighter-hover-color);
+   }
+
+   /* alert message in mobile displays */
+   .messageDiv {
+      position: absolute;
+      width: 100%;
+
+      z-index: 1001;
+
+      padding-block: 1rem;
+      padding-inline: 0.125rem;
+
+      border-top-left-radius: 0.625rem;
+      border-top-right-radius: 0.625rem;
+
+      font-size: 0.6875rem;
+      letter-spacing: 0.0437rem;
+
+      animation: fadeInOut 5s ease forwards;
    }
 }
 

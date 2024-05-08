@@ -12,6 +12,12 @@
    /* outline: 0.0625rem solid red; */
 }
 
+/* user text selection style on webpage */
+::selection {
+   color: #ffffff;
+   background-color: var(--contact-btn-outline-color);
+}
+
 :root {
    --navbar-gradient-light-color: #FE9145;
    --navbar-gradient-dark-color: #1E0D2F;
@@ -165,8 +171,10 @@ ul {
    transition: all .2s linear;
 }
 
-.project-logo:hover {
-   transform: scale(1.05) rotate(-2deg);
+@media (hover: hover) and (pointer: fine) {
+   .project-logo:hover {
+      transform: scale(1.05) rotate(-2deg);
+   }
 }
 
 .nav-links {
@@ -196,7 +204,7 @@ ul {
 }
 
 .nav-toggle .material-symbols-rounded {
-   font-size: 50px;
+   font-size: 3.125rem;
 }
 
 /* fade in animation for dropdown menu */
@@ -274,22 +282,16 @@ ul {
    }
 }
 
-/* sign out button hidden by-default: available when user signed in */
+/* USER SIGN OUT btn (hidden by default) */
 .signout-btn {
-   font-weight: 500;
-   font-size: 1.125rem;
-
-   display: none !important;
+   font-weight: 400;
+   font-size: 1.1rem;
 
    color: var(--navbar-text-color);
 
    cursor: pointer;
 
    transition: all 0.1s ease;
-}
-
-.show-signout-btn {
-   display: block;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -444,6 +446,8 @@ ul {
    justify-content: center;
 
    padding: 3.75rem 0 3.75rem 0;
+
+   user-select: none;
 }
 
 .icon-width {
@@ -586,6 +590,22 @@ ul {
 
    margin-top: 4.125rem;
    margin-left: 65%;
+}
+
+/* user can use services only when he signs in  */
+.service-btn1, .service-btn2 {
+   pointer-events: none;
+   cursor: not-allowed;
+
+   filter: grayscale(100%);
+   opacity: 0.5;
+}
+.service-btn1.active, .service-btn2.active {
+   pointer-events: all;
+   cursor: pointer;
+
+   filter: grayscale(0%);
+   opacity: 1;
 }
 
 /* footer section */

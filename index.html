@@ -1,18 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" loading="lazy">
+<html lang="en">
 
 <head>
    <meta charset="UTF-8">
    <!-- last-property disables the default zooming when user clicks on something like input fields on mobiles -->
    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
-   <title>ServiSpot Homepage</title>
+   <title>ServiSpot</title>
 
    <!-- custom stylesheets -->
    <link rel="stylesheet" href="./style.css">
    <link rel="stylesheet" href="./media-queries.css">
    <link rel="stylesheet" href="./signup.css">
    <link rel="stylesheet" href="./signin.css">
+
+   <!-- preload hero to fix loading issues -->
+   <link rel="preload" href="./assets/mobileAstronaut.svg" as="image">
+   <link rel="preload" href="./assets/astronaut bg image.svg" as="image">
 
    <!-- google font icons -->
    <link rel="stylesheet"
@@ -29,6 +33,12 @@
 
       gtag('config', 'G-KRTG8ZKS5K');
    </script>
+
+   <!-- adding website fevicon -->
+   <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon_io/apple-touch-icon.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon_io/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon_io/favicon-16x16.png">
+   <link rel="manifest" href="./assets/favicon_io/site.webmanifest">
 </head>
 
 <body>
@@ -104,6 +114,7 @@
 
                <p class="pwd-label">Password</p>
                <input type="password" placeholder="create a password" id="rPassword" required autocomplete="off">
+               <img class="eye" src="./assets/eyeOFF.svg" alt="hide/unhide password icon" id="eyeSignUp">
 
                <p class="option">
                   Already have an account? <span><a class="jump2signin" onclick="showSigninModal()">Sign in</a></span>
@@ -151,6 +162,7 @@
                <p class="pwd-label">Password</p>
                <input type="password" placeholder="enter your password" id="signin-password" required
                   autocomplete="off">
+               <img class="eye" src="./assets/eyeOFF.svg" alt="hide/unhide password icon" id="eyeSignIn">
 
                <p class="option">
                   Don't have an account? <span><a class="jump2signup" onclick="showSignupModal()">Sign up</a></span>
@@ -170,7 +182,7 @@
    </div>
 
    <!-- hero section -->
-   <header id="home">
+   <header id="home" loading="lazy">
       <div class="container header-section flex">
          <div class="header-left">
             <div class="for-mobile">
@@ -201,28 +213,28 @@
          <h2>Resources and Integrations</h2>
          <div class="contentbox flex">
             <div class="box flex">
-               <lord-icon src="https://cdn.lordicon.com/ffjlxuak.json" trigger="in" delay="200" state="in-reveal"
+               <lord-icon src="https://cdn.lordicon.com/ffjlxuak.json" trigger="in" delay="100" state="in-reveal"
                   colors="primary:#ee6418,secondary:#f4f19c">
                </lord-icon>
                <p>Cluster of cleaned datasets are used for the better understanding, to generate valuable outcomes.</p>
             </div>
 
             <div class="box flex">
-               <lord-icon src="https://cdn.lordicon.com/dmgxtuzn.json" trigger="in" delay="200" state="in-reveal"
+               <lord-icon src="https://cdn.lordicon.com/dmgxtuzn.json" trigger="in" delay="100" state="in-reveal"
                   colors="primary:#ee6418,secondary:#f4f19c">
                </lord-icon>
                <p>API integration for useful and fast query responses from the global marketplace.</p>
             </div>
 
             <div class="box flex">
-               <lord-icon src="https://cdn.lordicon.com/kcegqely.json" trigger="in" delay="200" state="in-reveal"
+               <lord-icon src="https://cdn.lordicon.com/kcegqely.json" trigger="in" delay="100" state="in-reveal"
                   colors="primary:#ee6418,secondary:#f4f19c">
                </lord-icon>
                <p>Used Artificial intelligence and machine learning in python apps to generate prediction results.</p>
             </div>
 
             <div class="box flex">
-               <lord-icon src="https://cdn.lordicon.com/vucunekw.json" trigger="in" delay="200" state="in-reveal"
+               <lord-icon src="https://cdn.lordicon.com/vucunekw.json" trigger="in" delay="100" state="in-reveal"
                   colors="primary:#ed6417,secondary:#f4f19c">
                </lord-icon>
                <p>Modern and Responsive web design. So you can use it on any device anywhere and anytime.</p>
@@ -338,6 +350,45 @@
    <script src="./menu-toggle.js"></script>
    <script src="./account-btn.js"></script>
    <script src="./modals.js"></script>
+
+   <!-- change password-type with eye-icon in modals -->
+   <script>
+      const eyeSignUp = document.getElementById('eyeSignUp')
+      const eyeSignIn = document.getElementById('eyeSignIn')
+      
+      const passwordSignUp = document.getElementById('rPassword')
+      const passwordSignIn = document.getElementById('signin-password')
+
+      eyeSignUp.onclick = function(){
+         if (passwordSignUp.type == 'password') {
+            passwordSignUp.type = 'text'
+            eyeSignUp.src = 'assets/eyeON.svg'
+         } else {
+            passwordSignUp.type = 'password'
+            eyeSignUp.src = 'assets/eyeOFF.svg'
+         }
+
+         eyeSignUp.classList.add('animate') // Add animate class
+         setTimeout(() => {
+            eyeSignUp.classList.remove('animate') // Remove it after 0.5s
+         }, 500)
+      }
+
+      eyeSignIn.onclick = function(){
+         if (passwordSignIn.type == 'password') {
+            passwordSignIn.type = 'text'
+            eyeSignIn.src = 'assets/eyeON.svg'
+         } else {
+            passwordSignIn.type = 'password'
+            eyeSignIn.src = 'assets/eyeOFF.svg'
+         }
+
+         eyeSignIn.classList.add('animate')
+         setTimeout(() => {
+            eyeSignIn.classList.remove('animate')
+         }, 500)
+      }
+   </script>
 </body>
 
 </html>

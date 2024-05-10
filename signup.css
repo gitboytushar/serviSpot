@@ -203,6 +203,30 @@ button {
    margin-top: 0.9375rem;
 }
 
+/* hide/unhide password when eye-icon is clicked in login forms */
+@keyframes eyeToggle {
+   from{
+      opacity: 0;
+      transform: rotateX(180deg);
+   }
+   to{
+      opacity: 1;
+      transform: rotateX(0deg);
+   }
+}
+.eye {
+   cursor: pointer;
+   width: 1.0625rem;
+   height: 1.0625rem;
+
+   position: absolute;
+   top: 34.35%;
+   right: 5%;
+}
+.eye.animate {
+   animation: eyeToggle 0.5s ease-in forwards;
+}
+
 .user-entry input {
    width: 15.625rem;
    height: 2.5rem;
@@ -404,6 +428,11 @@ button {
    .pwd-label {
       font-size: 0.875rem;
       font-weight: 400;
+   }
+
+   .eye {
+      top: 34%;
+      right: 4%;
    }
 
    .user-entry input {

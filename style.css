@@ -330,7 +330,7 @@ ul {
    justify-content: space-between;
 
    /* entry animation */
-   animation: entry 1s ease forwards;
+   animation: entry 0.5s ease-in forwards;
 }
 
 /* hiding the small astronaut image in desktop view */

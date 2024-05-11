@@ -411,6 +411,20 @@
    .signout-btn {
       transform: translateX(-0.375rem) translateY(0.625rem);
    }
+
+   /* Project Copyright at last */
+   .ack {
+      padding-inline: 1.25rem;
+   }
+
+   .ack p {
+      font-size: 0.875rem;
+   }
+
+   .ack a {
+      font-size: 0.875rem;
+      font-weight: 400;
+   }
 }
 
 /* for large Mobiles */
@@ -696,6 +710,20 @@
 
    .services-section h2 {
       font-size: 1.2rem;
+   }
+
+   /* Project Copyright at last */
+   .ack {
+      padding-inline: 0.625rem;
+   }
+
+   .ack p {
+      font-size: 0.75rem;
+   }
+
+   .ack a {
+      font-size: 0.75rem;
+      font-weight: 400;
    }
 }
 

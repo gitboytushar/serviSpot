@@ -687,3 +687,34 @@ footer a:hover {
       transform: translateY(0.125rem);
    }
 }
+
+/* Project Copyright at last */
+.ack {
+   padding-inline: var(--padding-inline-section);
+
+   padding-top: 1.25rem;
+   padding-bottom: 0.625rem;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   flex-wrap: wrap;
+
+   color: rgb(80, 80, 80);
+}
+
+.ack p {
+   font-family: "Montserrat", sans-serif;
+   font-size: 1.25rem;
+}
+
+.ack a {
+   text-decoration: underline;
+   color: rgb(80, 80, 80);
+   cursor: pointer;
+
+   font-family: "Montserrat", sans-serif;
+      font-size: 1.25rem;
+      font-weight: 500;
+}

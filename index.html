@@ -186,13 +186,13 @@
             </div>
             <h1>Explore. <br> Evaluate. Elevate.</h1>
 
-            <p class="intro-text">Welcome to our multi-service platform, where you'll discover a range of services to
-               try. Our mission is to ensure a seamless user experience as you navigate through our website. Simply sign
-               up for free to begin exploring and
-               leveraging our platform's offerings.</p>
+            <p class="intro-text">Welcome to our multi-service platform, here you'll find different services to try. We
+               aim to provide a modern and intuitive website for our users, simply Login to start using our services!
+            </p>
 
-            <p class="intro-text-in-mobile">Take a look a around what we have. Our goal is to provide you a seemless
-               multi-service platform.</p>
+            <p class="intro-text-in-mobile">We built this website to provide you a seemless multi-service experience.
+               <br> Do Login to use the services.
+            </p>
 
             <a class="cta-btn signup-btn" onclick="showSignupModal()">Get Started</a>
          </div>
@@ -337,54 +337,21 @@
       </a>
    </div>
 
-   <!-- Imp. firebase user authentication script -->
+   <!-- project copyright -->
+   <div class="ack">
+      <p>&#169; Group 66 &#183; Major Project 2023-2024 &#183; <a href="#">Our Policy</a></p>
+   </div>
+
+   <!-- firebase authentication script -->
    <script defer type="module" src="./firebase/auth.js"></script>
 
-   <!-- important javascripts :) -->
+   <!-- website feature scripts -->
    <script src="https://cdn.lordicon.com/lordicon.js"></script>
    <script src="./scroll2section.js"></script>
    <script src="./menu-toggle.js"></script>
    <script src="./account-btn.js"></script>
-   <script src="./modals.js"></script>
-
-   <!-- change password-type with eye-icon in modals -->
-   <script>
-      const eyeSignUp = document.getElementById('eyeSignUp')
-      const eyeSignIn = document.getElementById('eyeSignIn')
-      
-      const passwordSignUp = document.getElementById('rPassword')
-      const passwordSignIn = document.getElementById('signin-password')
-
-      eyeSignUp.onclick = function(){
-         if (passwordSignUp.type == 'password') {
-            passwordSignUp.type = 'text'
-            eyeSignUp.src = 'assets/eyeON.svg'
-         } else {
-            passwordSignUp.type = 'password'
-            eyeSignUp.src = 'assets/eyeOFF.svg'
-         }
-
-         eyeSignUp.classList.add('animate') // Add animate class
-         setTimeout(() => {
-            eyeSignUp.classList.remove('animate') // Remove it after 0.5s
-         }, 500)
-      }
-
-      eyeSignIn.onclick = function(){
-         if (passwordSignIn.type == 'password') {
-            passwordSignIn.type = 'text'
-            eyeSignIn.src = 'assets/eyeON.svg'
-         } else {
-            passwordSignIn.type = 'password'
-            eyeSignIn.src = 'assets/eyeOFF.svg'
-         }
-
-         eyeSignIn.classList.add('animate')
-         setTimeout(() => {
-            eyeSignIn.classList.remove('animate')
-         }, 500)
-      }
-   </script>
+   <script src="./modals.js"></script> <!-- auth form -->
+   <script src="./public/eye4pwd.js"></script> <!-- hide/unhide password with eye -->
 </body>
 
 </html>

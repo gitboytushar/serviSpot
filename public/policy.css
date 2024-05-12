@@ -1,0 +1,129 @@
+/* importing google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+ :root {
+    --navbar-gradient-light-color: #FE9145;
+    --navbar-gradient-dark-color: #1E0D2F;
+    --navbar-text-color: #FFFFFF;
+ 
+    --intro-text-color: #F4E9FF;
+    --section-primary-text-color: #EBD8FF;
+    --section-highlighter-text-color: #FC934F;
+ 
+    --keywords-text-color: #FD9550;
+    --heading-text-color1: #FD9550;
+    --heading-text-color2: #130D19;
+    --sub-heading-text-color: #FFFFFF;
+ 
+    --contentbox-gradient-endcolor: #1F0E30;
+ 
+ 
+    --btn-bg-color: #EE6418;
+    --btn-hover-bg-color: #dd5c16;
+    --btn-text-color: #FFFFFF;
+ 
+ 
+    --primary-bg-color: #130D19;
+    --secondary-bg-color: #000000;
+    --tertiary-bg-color: #FFFFFF;
+ 
+    --footer-bar-color: #FE9146;
+    --footer-primary-text-color: #1E0E2E;
+ 
+    --contact-btn-outline-color: #EE6418;
+    --contact-btn-primary-text-color: #FFFFFF;
+    --contact-btn-hover-bg-color: #EE6418;
+    --contact-btn-hover-text-color: #130D19;
+ 
+    --padding-inline-section: 6.6875rem;
+ }
+
+ body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--section-primary-text-color);
+    background-color: var(--primary-bg-color);
+
+    margin-bottom: 70px;
+ }
+
+/* nav bar */
+.main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+ 
+    background-image: linear-gradient(to right, var(--navbar-gradient-light-color), var(--navbar-gradient-dark-color));
+ 
+    box-shadow: 0 0.1875rem 0.625rem rgba(0, 0, 0, 0.35);
+ 
+    height: 5rem;
+ 
+    padding-top: 1.6875rem;
+    padding-bottom: 1.6875rem;
+ 
+    border-bottom-left-radius: 2.5rem;
+    border-bottom-right-radius: 2.5rem;
+ 
+    font-size: large;
+ 
+    z-index: 10;
+ }
+ 
+ .project-logo {
+    margin-top: 0.35rem;
+    cursor: pointer;
+ 
+    transition: all .2s linear;
+ }
+ 
+ .project-logo img {
+    position: fixed;
+    /* margin: -100px; */
+    width: 10rem;
+ }
+
+ /* utility classes */
+
+.container {
+    padding-inline: var(--padding-inline-section);
+ }
+ 
+ .flex {
+    display: flex;
+    align-items: center;
+ }
+
+
+/* policy */
+h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+ 
+    margin-top: 2rem;
+ 
+    color: var(--heading-text-color1);
+ }
+
+ h3{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+ 
+    margin-top: 1rem;
+ 
+    color: var(--section-primary-text-color);
+ }
+
+ p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+ }

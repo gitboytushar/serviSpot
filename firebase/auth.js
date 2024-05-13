@@ -63,6 +63,7 @@ function changeThings(userLoggedIn) {
   const serviceBtn1 = document.querySelector('.cta-btn.service-btn1')
   const serviceBtn2 = document.querySelector('.cta-btn.service-btn2')
   const serviceBtn3 = document.querySelector('.cta-btn.service-btn3')
+  const serviceBtn4 = document.querySelector('.cta-btn.service-btn4')
 
   if (userLoggedIn) {
     showSignUpToUser.style.display = 'none'
@@ -76,6 +77,7 @@ function changeThings(userLoggedIn) {
     serviceBtn1.classList.add('active')
     serviceBtn2.classList.add('active')
     serviceBtn3.classList.add('active')
+    serviceBtn4.classList.add('active')
   } else {
     showSignUpToUser.style.display = 'flex'
     showSignUpCTA.style.display = 'flex'
@@ -88,6 +90,7 @@ function changeThings(userLoggedIn) {
     serviceBtn1.classList.remove('active')
     serviceBtn2.classList.remove('active')
     serviceBtn3.classList.remove('active')
+    serviceBtn4.classList.remove('active')
   }
 }
 

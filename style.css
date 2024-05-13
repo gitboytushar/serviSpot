@@ -600,7 +600,8 @@ ul {
 /* user can use services only when he signs in  */
 .service-btn1,
 .service-btn2,
-.service-btn3 {
+.service-btn3,
+.service-btn4 {
    pointer-events: none;
    cursor: not-allowed;
 
@@ -610,7 +611,8 @@ ul {
 
 .service-btn1.active,
 .service-btn2.active,
-.service-btn3.active {
+.service-btn3.active,
+.service-btn4.active {
    pointer-events: all;
    cursor: pointer;
 
@@ -715,6 +717,6 @@ footer a:hover {
    cursor: pointer;
 
    font-family: "Montserrat", sans-serif;
-      font-size: 1.25rem;
-      font-weight: 500;
+   font-size: 1.25rem;
+   font-weight: 500;
 }

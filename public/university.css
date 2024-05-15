@@ -47,8 +47,8 @@
 }
 
 body {
-   font-family: 'Poppins', sans-serif;
-   color: var(--section-primary-text-color);
+   font-family: "Montserrat", sans-serif;
+   color: var(--btn-text-color);
    background-color: var(--primary-bg-color);
 }
 
@@ -63,20 +63,11 @@ h2 {
 }
 
 p {
-   font-family: "Roboto", sans-serif;
+   font-family: "Montserrat", sans-serif;
    font-weight: 300;
    font-style: normal;
 
    text-shadow: 0 0.0625rem 0.1875rem #000000;
-}
-
-a {
-   text-decoration: none;
-   display: inline-block;
-
-   font-family: "Roboto", sans-serif;
-   font-style: normal;
-   font-weight: 500;
 }
 
 /* utility classes */
@@ -159,6 +150,7 @@ a {
 
 .highlight {
    color: var(--section-highlighter-text-color);
+   font-weight: 500;
 }
 
 .mobile {
@@ -201,7 +193,7 @@ a {
 
    .content {
       width: 90%;
-      margin-top: 2.8125rem;
+      margin-top: 1.5625rem;
    }
 
    .content p {
@@ -225,35 +217,38 @@ a {
 
 @media screen and (max-width: 26.875rem) {
    .container {
-      padding-inline: 1.875rem;
+      padding-inline: 2.1875rem;
    }
 
    .content {
       background: none;
-      width: 100%;
+      width: 95%;
       text-align: center;
       justify-content: center;
    }
 
    .info h2 {
-      font-size: 1.2rem;
+      font-size: 1.1875rem;
    }
 
    .content p {
       width: 100%;
-      font-size: 0.9rem;
-      padding: 0;
-      margin: 0;
+      font-size: 0.875rem;
    }
 
    .mobile {
       display: block;
-      margin-top: 2.5rem;
-      padding-inline: 1.25rem;
    }
 
-   img {
+   .mobile img {
       width: 21.875rem;
+
+      object-fit: cover;
+
+      margin-top: 2.1875rem;
+      padding-right: 0.4688rem;
+
+      justify-content: center;
    }
 }
 
@@ -263,11 +258,18 @@ a {
    }
 
    .content p {
-      font-size: 0.9rem;
+      font-size: 0.875rem;
    }
 
-   img {
+   .mobile img {
       width: 18.75rem;
+
+      object-fit: cover;
+
+      margin-top: 2.1875rem;
+      padding-right: 0.4688rem;
+
+      justify-content: center;
    }
 }
 
@@ -276,11 +278,15 @@ a {
       font-size: 1.1rem;
    }
 
-   .content p {
-      font-size: 0.8rem;
+   .content {
+      width: 100%;
    }
 
-   img {
+   .content p {
+      font-size: 0.8125rem;
+   }
+
+   .mobile img {
       width: 15.625rem;
    }
 }

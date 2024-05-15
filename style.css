@@ -416,6 +416,7 @@ ul {
    font-size: 1rem;
    margin: 0rem 0.625rem;
    color: var(--section-primary-text-color);
+   letter-spacing: 0.0375rem;
 }
 
 /* about section */

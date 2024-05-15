@@ -47,8 +47,8 @@
 }
 
 body {
-   font-family: 'Poppins', sans-serif;
-   color: var(--section-primary-text-color);
+   font-family: "Montserrat", sans-serif;
+   color: var(--btn-text-color);
    background-color: var(--primary-bg-color);
 }
 
@@ -64,7 +64,7 @@ h2 {
 
 p {
    font-family: "Montserrat", sans-serif;
-   font-weight: 200;
+   font-weight: 300;
    font-style: normal;
 }
 
@@ -137,29 +137,29 @@ a {
 }
 
 .content {
-   font-size: 1.5625rem;
-   font-weight: 250;
+   font-size: 1.4rem;
 
-   width: 65%;
+   line-height: 2rem;
+   letter-spacing: 0.0313rem;
+
+   width: 75%;
 
    margin-top: 4.25rem;
 
-   text-align: justify;
-}
-
-.content p:nth-child(2) {
-   margin-top: 2.8125rem;
+   text-align: center;
 }
 
 .highlight {
    color: var(--section-highlighter-text-color);
+   font-weight: 400;
+   text-decoration: 0.0625rem underline;
 }
 
 /* RESPONSIVE CODE */
 
 @media screen and (max-width: 64rem) {
    .content {
-      width: 80%;
+      width: 90%;
    }
 
    .content p {
@@ -169,12 +169,11 @@ a {
 
 @media screen and (max-width: 48rem) {
    .content {
-      width: 100%;
+      width: 110%;
    }
 
    .content p {
-      font-size: 1.2rem;
-      text-align: center;
+      font-size: 1.0625rem;
    }
 
    .project-logo {
@@ -187,12 +186,14 @@ a {
 
 @media screen and (max-width: 26.875rem) {
    .container {
-      padding: 0.5625rem;
+      padding-inline: 1.375rem;
    }
 
    .content {
       margin-top: 1.875rem;
-      width: 85%;
+      padding-inline: 1rem;
+
+      line-height: 1.6875rem;
    }
 
    .info h2 {
@@ -201,23 +202,30 @@ a {
    }
 
    .content p {
-      font-size: 1.2rem;
+      font-size: 1.0625rem;
    }
 }
 
 @media screen and (max-width: 23.4375rem) {
    .content {
-      width: 80%;
+      line-height: 1.5rem;
    }
 
    .content p {
-      font-size: 1rem;
+      font-size: 0.875rem;
    }
 }
 
 @media screen and (max-width: 20rem) {
+   .container {
+      padding-inline: 1.5625rem;
+   }
+
+   .content {
+      line-height: 1.25rem;
+   }
 
    .content p {
-      font-size: 1.05rem;
+      font-size: 0.8125rem;
    }
 }

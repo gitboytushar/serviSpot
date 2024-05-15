@@ -48,7 +48,7 @@
 
 body {
    font-family: 'Poppins', sans-serif;
-   color: var(--section-primary-text-color);
+   color: var(--navbar-text-color);
    background-color: var(--primary-bg-color);
 }
 
@@ -136,7 +136,7 @@ a {
    flex-direction: column;
    text-align: center;
 
-   margin-inline: 16.8125rem;
+   margin-inline: 31.25rem;
 }
 
 .content {
@@ -145,9 +145,14 @@ a {
 
 .name {
    font-size: 1.5625rem;
-   font-weight: 500;
+   font-weight: 600;
 
-   margin-bottom: 0.9375rem;
+   margin-bottom: 1rem;
+}
+
+.roles {
+   font-weight: 300;
+   letter-spacing: 0.0625rem;
 }
 
 /* subfooter contant us button */
@@ -161,8 +166,8 @@ a {
 }
 
 .subfooter lord-icon {
-   width: 2.5rem;
-   height: 2.5rem;
+   width: 1.875rem;
+   height: 1.875rem;
 }
 
 .contact-btn {
@@ -189,15 +194,17 @@ a {
    transition: background-color .3s ease;
 }
 
-.contact-btn:hover {
-   box-shadow: 0 0 0.625rem var(--navbar-gradient-light-color);
+@media (hover: hover) and (pointer: fine) {
+   .contact-btn:hover {
+      box-shadow: 0 0 0.625rem var(--navbar-gradient-light-color);
+   }
 }
 
 /* RESPONSIVE CODE */
 
 @media screen and (max-width: 64rem) {
    .info {
-      margin-inline: 5rem;
+      margin-inline: 13.75rem;
    }
 
    .content {
@@ -219,6 +226,10 @@ a {
       top: 50%;
       transform: translate(-50%, -50%);
    }
+
+   .info {
+      margin-inline: 5.625rem;
+   }
 }
 
 @media screen and (max-width: 26.875rem) {
@@ -231,6 +242,10 @@ a {
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
+   }
+
+   .info {
+      margin-inline: 1.25rem;
    }
 
    .info h2 {
@@ -248,20 +263,18 @@ a {
    .contact-btn {
       width: 55%;
       margin-top: 3.125rem;
+      border-radius: 0.625rem;
    }
 }
 
 @media screen and (max-width: 23.4375rem) {
-   .info {
-      margin-inline: 4.375rem;
-   }
-
    .info h2 {
       margin-top: 8.125rem;
    }
 
    .content p {
       font-size: 1.1rem;
+      padding-inline: 1rem;
    }
 }
 

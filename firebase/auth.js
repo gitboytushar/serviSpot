@@ -197,19 +197,17 @@ function handleGoogleSignIn(event) {
   event.preventDefault()
 
   signInWithPopup(auth, provider)
-  .then((result) => {
-    const credential = GoogleAuthProvider.credentialFromResult(result);
-    const user = result.user;
+    .then((result) => {
+      const credential = GoogleAuthProvider.credentialFromResult(result)
+      const user = result.user
 
-    // console.log(user) // for developer, chrome inspect console output
-    
-    localStorage.setItem('loggedInUserId', user.uid) // set uid in localStorage
-    window.location.reload()
+      localStorage.setItem('loggedInUserId', user.uid) // set uid in localStorage
+      window.location.reload()
 
-  }).catch((error) => {
-    const errorMessage = error.message;
-    console.error('Error in Google Sign In: ', errorMessage);
-  });
+    }).catch((error) => {
+      const errorMessage = error.message
+      console.error('Error in Google Sign In: ', errorMessage)
+    })
 }
 // Function called as per user scenario
 googleLoginSignUp.addEventListener('click', handleGoogleSignIn)
@@ -220,22 +218,31 @@ const logoutButton = document.querySelector('.signout-btn')
 
 logoutButton.addEventListener('click', () => {
   localStorage.removeItem('loggedInUserId') // delete uid from the localStorage
+  localStorage.setItem('isUserLoggedIn', 'false')
 
   signOut(auth).then(() => {
+    changeThings(false)
     window.location.reload()
   }).catch((error) => {
     console.log('Error in Signing Out: ', error)
   })
 })
 
-// -------------------------------------------------------------- User Access -----------------------------------------------------------
-onAuthStateChanged(auth, (user) => {
-  const loggedInUserId = localStorage.getItem('loggedInUserId')
 
-  if (loggedInUserId) {
-    changeThings(true) // activate services for user
+// -------------------------------------------------------------- User Access -----------------------------------------------------------
+// check that user is already logged in or not on window reload
+document.addEventListener('DOMContentLoaded', () => {
+  const isUserLoggedIn = localStorage.getItem('isUserLoggedIn') === 'true'
+  changeThings(isUserLoggedIn)
+})
+
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    localStorage.setItem('isUserLoggedIn', 'true')
+    localStorage.setItem('loggedInUserId', user.uid)
+    changeThings(true)
   } else {
+    localStorage.setItem('isUserLoggedIn', 'false')
     changeThings(false)
-    scrollToHome() // after logout scroll user to the page top :)
   }
 })

@@ -98,7 +98,7 @@ h2 {
 }
 
 .project-logo {
-   margin-top: .35rem;
+   margin-top: 0.35rem;
    cursor: pointer;
 
    transition: all .2s linear;
@@ -134,7 +134,7 @@ iframe {
    height: 32.1875rem;
 
    border: none;
-   border-radius: 1.25rem;
+   border-radius: 0.9375rem;
 
    box-shadow: 0 0 3.125rem 1.25rem var(--navbar-gradient-dark-color);
 }
@@ -157,6 +157,8 @@ iframe {
 
       width: 53.4375rem;
       height: 28.125rem;
+
+      aspect-ratio: 16/9;
    }
 
    .video {
@@ -173,16 +175,13 @@ iframe {
       font-size: 1.3rem;
    }
 
-   /* fixed a sizing bug here */
    iframe {
-      width: 100%;
-      /* Adjusted width for responsiveness */
-      height: auto;
-      /* Ensures aspect ratio is maintained */
-      max-width: 22.1875rem;
-      /* Added max-width to prevent stretching */
-      max-height: 12.5rem;
-      /* Added max-height to prevent stretching */
+      border-radius: 0.625rem;
+
+      width: 40.625rem;
+      height: fit-content;
+
+      aspect-ratio: 16/9;
    }
 
    .project-logo {
@@ -193,9 +192,13 @@ iframe {
    }
 }
 
-@media screen and (max-width: 26.5625rem) {
+@media screen and (max-width: 26.875rem) {
    .info h2 {
       font-size: 1.1rem;
+   }
+
+   iframe {
+      width: 23.75rem;
    }
 }
 
@@ -203,10 +206,18 @@ iframe {
    .info h2 {
       font-size: 1rem;
    }
+
+   iframe {
+      width: 21.25rem;
+   }
 }
 
 @media screen and (max-width: 20rem) {
    .info h2 {
-      font-size: .8rem;
+      font-size: 0.8rem;
+   }
+
+   iframe {
+      width: 17.5rem;
    }
 }

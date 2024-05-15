@@ -169,6 +169,11 @@ form textarea {
 
 }
 
+form input:focus,
+textarea:focus {
+   outline: none;
+}
+
 form textarea {
    height: 10.625rem;
 }

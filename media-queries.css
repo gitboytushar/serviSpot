@@ -257,6 +257,11 @@
       gap: 5rem;
    }
 
+   .s3-icon {
+      width: 15.625rem !important;
+      height: 15.625rem !important;
+   }
+
    .content p {
       font-size: 1.1rem;
       width: 17rem;
@@ -372,6 +377,11 @@
       height: 22rem;
 
       padding-inline: 2rem;
+   }
+
+   .s3-icon {
+      width: 13.75rem !important;
+      height: 13.75rem !important;
    }
 
    .content p {
@@ -569,6 +579,13 @@
       max-width: 100%;
       height: auto;
       padding-bottom: 5rem;
+   }
+
+   .s3-icon {
+      width: 12.5rem !important;
+      height: 12.5rem !important;
+
+      transform: translateY(1rem);
    }
 
    .services-section h2 {

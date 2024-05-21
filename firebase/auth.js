@@ -115,6 +115,41 @@ function changeThings(userLoggedIn) {
   }
 }
 
+// ---------------- Add or Remove Monetag Advertisements based on user authentication states :) ----------------
+
+var isLoggedIn = false // Set to true on sign-in
+
+// add the Monetag script-tag in index.html
+function addMonetagScript() {
+  var script = document.createElement('script')
+  script.src = 'https://alwingulla.com/88/tag.min.js'
+  script.setAttribute('data-zone', '67353')
+  script.async = true
+  script.setAttribute('data-cfasync', 'false')
+  script.id = 'monetagScript'
+  document.head.appendChild(script)
+}
+
+// remove the Monetag script tag from the index.html
+function removeMonetagScript() {
+  var script = document.getElementById('monetagScript')
+  if (script) {
+    setTimeout(function () {
+      script.remove()
+    }, 500)
+  }
+}
+
+function onUserSignIn() {
+  isLoggedIn = true
+  removeMonetagScript()
+}
+
+function onUserSignOut() {
+  isLoggedIn = false
+  addMonetagScript()
+}
+
 // --------------------------------------------------- Registration • Firestore Sign up ----------------------------------------------
 const signUp = document.getElementById('submitSignUp')
 
@@ -262,8 +297,10 @@ onAuthStateChanged(auth, (user) => {
     localStorage.setItem('isUserLoggedIn', 'true')
     localStorage.setItem('loggedInUserId', user.uid)
     changeThings(true)
+    onUserSignIn()
   } else {
     localStorage.setItem('isUserLoggedIn', 'false')
     changeThings(false)
+    onUserSignOut()
   }
 })

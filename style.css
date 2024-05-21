@@ -720,4 +720,40 @@ footer a:hover {
    font-family: "Montserrat", sans-serif;
    font-size: 1.25rem;
    font-weight: 500;
+
+   margin-bottom: 40px;
+}
+
+/* Banner: Tell user to sign in */
+marquee {
+   display: flex;
+   align-items: center;
+
+   width: 100vw;
+   height: 40px;
+
+   background-color: rgba(0, 0, 0, 0.5);
+   backdrop-filter: blur(50px);
+   -webkit-backdrop-filter: blur(50px);
+
+   font-size: 22px;
+   font-weight: 400;
+
+   z-index: 1;
+
+   position: fixed;
+   bottom: 0px;
+
+   user-select: none;
+   pointer-events: none;
+   overflow: hidden;
+}
+
+marquee span {
+   display: inline-block;
+   white-space: nowrap;
+   background: linear-gradient(to right, #FF62A5, #FF8C00, #FFD700, #ADFF2F, #00CED1, #1E90FF, #996df3, #f22756);
+   background-clip: text;
+   -webkit-background-clip: text;
+   color: transparent;
 }

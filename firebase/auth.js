@@ -64,6 +64,12 @@ function changeThings(userLoggedIn) {
   const serviceBtn2 = document.querySelector('.cta-btn.service-btn2')
   const serviceBtn3 = document.querySelector('.cta-btn.service-btn3')
   const serviceBtn4 = document.querySelector('.cta-btn.service-btn4')
+  
+  const bannerNotification = document.getElementById('banner-notification')
+
+  const introTextDesktop = document.querySelector('.intro-text')
+  const introTextMobile = document.querySelector('.intro-text-in-mobile')
+
 
   if (userLoggedIn) {
     showSignUpToUser.style.display = 'none'
@@ -78,6 +84,16 @@ function changeThings(userLoggedIn) {
     serviceBtn2.classList.add('active')
     serviceBtn3.classList.add('active')
     serviceBtn4.classList.add('active')
+    
+    // hide the floating banner on sign in
+    bannerNotification.style.display = 'none'
+
+    // change the intro text on user sign in
+    introTextDesktop.innerHTML = "Congrats! &#127881; <br> You've Successfully Logged in to ServiSpot platform. Our Services are Now Available to use. <br><br> Have Fun..."
+    introTextDesktop.style.paddingRight = '20px';
+
+    introTextMobile.innerHTML = "Congrats! &#127881; <br> You've Successfully Logged in. <br> Our Services are Now Available to use. <br><br> <b>Have Fun...</b>"
+
   } else {
     showSignUpToUser.style.display = 'flex'
     showSignUpCTA.style.display = 'flex'
@@ -86,11 +102,16 @@ function changeThings(userLoggedIn) {
 
     showSignOutToUser.style.display = 'none' // hide sign out button after sign out
 
-    // de-activate service buttons
     serviceBtn1.classList.remove('active')
     serviceBtn2.classList.remove('active')
     serviceBtn3.classList.remove('active')
     serviceBtn4.classList.remove('active')
+
+    bannerNotification.style.display = 'flex'
+
+    introTextDesktop.innerHTML = "Welcome to our multi-service platform, where modernity meets intuition for a great user experience. Discover a range of services we provide here. Sign in now and unlock the full potential of our website!"
+
+    introTextMobile.innerHTML = "We built this website to provide you a seemless multi-service experience. <br> Unlock our services Now."
   }
 }
 

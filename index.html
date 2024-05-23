@@ -5,7 +5,7 @@
    <meta charset="UTF-8">
    <!-- last-property disables the default zooming when user clicks on something like input fields on mobiles -->
    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-   
+
    <title>ServiSpot</title>
 
    <!-- custom stylesheets -->
@@ -186,9 +186,13 @@
             </div>
             <h1>Explore. <br> Evaluate. Elevate.</h1>
 
-            <p class="intro-text">Welcome to our multi-service platform, where modernity meets intuition for a great user experience. Discover a range of services we provide here. Sign in now and unlock the full potential of our website!</p>
+            <p class="intro-text">Welcome to our multi-service platform, where modernity meets intuition for a great
+               user experience. Discover a range of services we provide here. Sign in now and unlock the full potential
+               of our website!</p>
 
-            <p class="intro-text-in-mobile">We built this website to provide you a seemless multi-service experience. <br> Unlock our services Now.</p>
+            <p class="intro-text-in-mobile">We built this website to provide you a seemless multi-service experience.
+               <br> Unlock our services Now.
+            </p>
 
             <a class="cta-btn signup-btn" onclick="showSignupModal()">Get Started</a>
          </div>
@@ -251,8 +255,7 @@
             <img class="item8 icon-width" style="border-radius: 0.625rem;" src="./assets/serviceIcons/javascript.svg"
                alt="js logo">
             <img class="item9 icon-width" src="./assets/serviceIcons/vercel.svg" alt="vercel logo">
-            <img class="item10 icon-width" src="/assets/serviceIcons/monetag.webp"
-               alt="Monetag.com Ads logo">
+            <img class="item10 icon-width" src="/assets/serviceIcons/monetag.webp" alt="Monetag.com Ads logo">
             <img class="item11 icon-width" src="./assets/serviceIcons/google-analytics-icon.svg"
                alt="google analytics logo">
             <img class="item12 icon-width" src="./assets/serviceIcons/google-firebase-icon.svg"
@@ -356,12 +359,20 @@
    </div>
 
    <!-- Floating Banner on Landing page bottom: Tell users to sign in-->
-   <marquee id="banner-notification" scrollamount="15">
-         <span>
-            Sign in to remove ads & Start enjoying our services. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Sign in to remove ads & Start enjoying our services. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Sign in to remove ads & Start enjoying our services. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Sign in to remove ads & Start enjoying our services. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Sign in to remove ads & Start enjoying our services.
-         </span>
-   </marquee>
-   
+   <div id="banner-notification">
+      <p id="banner-text">
+         Sign in to remove ads & Start enjoying our services. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+         &nbsp;
+         &nbsp; &nbsp; Sign in to remove ads & Start enjoying our services. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+         &nbsp;
+         &nbsp; &nbsp; &nbsp; &nbsp; Sign in to remove ads & Start enjoying our services. &nbsp; &nbsp; &nbsp; &nbsp;
+         &nbsp;
+         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Sign in to remove ads & Start enjoying our services. &nbsp; &nbsp;
+         &nbsp;
+         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Sign in to remove ads & Start enjoying our services.
+      </p>
+   </div>
+
 
    <!-- firebase authentication script -->
    <script defer type="module" src="./firebase/auth.js"></script>

@@ -64,7 +64,7 @@ function changeThings(userLoggedIn) {
   const serviceBtn2 = document.querySelector('.cta-btn.service-btn2')
   const serviceBtn3 = document.querySelector('.cta-btn.service-btn3')
   const serviceBtn4 = document.querySelector('.cta-btn.service-btn4')
-  
+
   const bannerNotification = document.getElementById('banner-notification')
 
   const introTextDesktop = document.querySelector('.intro-text')
@@ -84,7 +84,7 @@ function changeThings(userLoggedIn) {
     serviceBtn2.classList.add('active')
     serviceBtn3.classList.add('active')
     serviceBtn4.classList.add('active')
-    
+
     // hide the floating banner on sign in
     bannerNotification.style.display = 'none'
 
@@ -119,35 +119,56 @@ function changeThings(userLoggedIn) {
 
 var isLoggedIn = false // Set to true on sign-in
 
-// add the Monetag script-tag in index.html
-function addMonetagScript() {
-  var script = document.createElement('script')
-  script.src = 'https://alwingulla.com/88/tag.min.js'
-  script.setAttribute('data-zone', '67353')
-  script.async = true
-  script.setAttribute('data-cfasync', 'false')
-  script.id = 'monetagScript'
-  document.head.appendChild(script)
+// Function to add the first Monetag script
+function addFirstMonetagScript() {
+  var script1 = document.createElement('script')
+  script1.textContent = "(function(d,z,s){s.src='https://'+d+'/401/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('ofleafeona.com',7497938,document.createElement('script'))"
+  script1.async = true
+  script1.setAttribute('data-cfasync', 'false')
+  script1.id = 'monetagScript1'
+  document.head.appendChild(script1)
 }
 
-// remove the Monetag script tag from the index.html
-function removeMonetagScript() {
-  var script = document.getElementById('monetagScript')
-  if (script) {
+// Function to add the second Monetag script
+function addSecondMonetagScript() {
+  var script2 = document.createElement('script')
+  script2.textContent = "(function(d,z,s){s.src='https://'+d+'/400/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('offfurreton.com',7490023,document.createElement('script'))"
+  script2.async = true
+  script2.setAttribute('data-cfasync', 'false')
+  script2.id = 'monetagScript2'
+  document.head.appendChild(script2)
+}
+
+// Function to remove the first Monetag script
+function removeFirstMonetagScript() {
+  var script1 = document.getElementById('monetagScript1')
+  if (script1) {
     setTimeout(function () {
-      script.remove()
+      script1.remove()
+    }, 500)
+  }
+}
+
+// Function to remove the second Monetag script
+function removeSecondMonetagScript() {
+  var script2 = document.getElementById('monetagScript2')
+  if (script2) {
+    setTimeout(function () {
+      script2.remove()
     }, 500)
   }
 }
 
 function onUserSignIn() {
-  isLoggedIn = true
-  removeMonetagScript()
+  isLoggedIn = true;
+  removeFirstMonetagScript();
+  removeSecondMonetagScript();
 }
 
 function onUserSignOut() {
-  isLoggedIn = false
-  addMonetagScript()
+  isLoggedIn = false;
+  addFirstMonetagScript();
+  addSecondMonetagScript();
 }
 
 // --------------------------------------------------- Registration • Firestore Sign up ----------------------------------------------
@@ -296,8 +317,8 @@ onAuthStateChanged(auth, (user) => {
   if (user) {
     localStorage.setItem('isUserLoggedIn', 'true')
     localStorage.setItem('loggedInUserId', user.uid)
-    changeThings(true)
-    onUserSignIn()
+    changeThings(true) // change page content
+    onUserSignIn() // remove ads
   } else {
     localStorage.setItem('isUserLoggedIn', 'false')
     changeThings(false)

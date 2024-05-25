@@ -328,9 +328,10 @@ ul {
 
 .header-section {
    justify-content: space-between;
+}
 
-   /* entry animation */
-   animation: entry 0.5s ease-in forwards;
+.header-right {
+   animation: entry 0.9s ease-in forwards;
 }
 
 /* hiding the small astronaut image in desktop view */
@@ -341,11 +342,18 @@ ul {
 .header-left h1 {
    font-size: 4.0625rem;
    margin-bottom: 1.6875rem;
+   animation: entry 0.9s ease-in forwards;
 }
 
 .header-left p {
    margin-bottom: 1.6875rem;
+   padding-right: 0.625rem;
    width: 43.75rem;
+   animation: entry 0.7s ease-in forwards;
+}
+
+.cta-btn.signup-btn {
+   animation: entry 0.5s ease-in forwards;
 }
 
 .intro-text-in-mobile {

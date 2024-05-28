@@ -9,6 +9,10 @@
    box-sizing: border-box;
 }
 
+body {
+   padding-bottom: 5rem;
+}
+
 :root {
    --navbar-gradient-light-color: #FE9145;
    --navbar-gradient-dark-color: #1E0D2F;
@@ -56,8 +60,6 @@ h2 {
    font-family: "Montserrat", sans-serif;
    font-weight: 700;
    font-style: normal;
-
-   margin-top: 8.125rem;
 
    color: var(--heading-text-color1);
 }
@@ -119,14 +121,15 @@ h2 {
 
 .info {
    flex-direction: column;
+   gap: 7rem;
 }
 
-.info h2 {
+.info .box:first-child {
    margin-top: 8.75rem;
 }
 
 .video {
-   margin-top: 3.75rem;
+   margin-top: 3rem;
 }
 
 iframe {
@@ -193,6 +196,10 @@ iframe {
 }
 
 @media screen and (max-width: 26.875rem) {
+   .info {
+      gap: 4rem;
+   }
+
    .info h2 {
       font-size: 1.1rem;
    }
